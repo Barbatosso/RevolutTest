@@ -63,7 +63,7 @@ class AppRouter: NSObject, Routable {
   }
 
   func push(_ module: Presentable?, animated: Bool) {
-    guard let controllerToPresent = module?.toPresent() else {
+    guard let controllerToPush = module?.toPresent() else {
       assertionFailure("Cannot to push module: \(module.debugDescription)")
       return
     }
@@ -71,7 +71,7 @@ class AppRouter: NSObject, Routable {
       assertionFailure("Your can't push module because your rootController is: \(rootContoller.debugDescription)")
       return
     }
-    navigationController.pushViewController(controllerToPresent, animated: animated)
+    navigationController.pushViewController(controllerToPush, animated: animated)
   }
 
   func popModule(animated: Bool) {
