@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2362A4C62167B720000C8046 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
 		2362A4C82167B72B000C8046 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2362A4D02167F538000C8046 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4CF2167F538000C8046 /* Presentable.swift */; };
+		2362A4D32167F8AA000C8046 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D22167F8AA000C8046 /* Routable.swift */; };
+		2362A4D52167FACB000C8046 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D42167FACB000C8046 /* Coordinator.swift */; };
+		2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D72167FB22000C8046 /* BaseCoordinator.swift */; };
+		2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D92167FDE6000C8046 /* AppRouter.swift */; };
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A406D2167AF9C0044ACA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406C2167AF9C0044ACA8 /* ViewController.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 
 /* Begin PBXFileReference section */
 		2362A4C52167B720000C8046 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
+		2362A4CF2167F538000C8046 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		2362A4D22167F8AA000C8046 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		2362A4D42167FACB000C8046 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2362A4D72167FB22000C8046 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		2362A4D92167FDE6000C8046 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		236A40672167AF9C0044ACA8 /* RevolutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevolutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236A406A2167AF9C0044ACA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236A406C2167AF9C0044ACA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +69,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2362A4CC2167F4D9000C8046 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4CD2167F4E4000C8046 /* CoreLayer */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		2362A4CD2167F4E4000C8046 /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4CE2167F4EB000C8046 /* Coordinator */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		2362A4CE2167F4EB000C8046 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4D62167FAFA000C8046 /* BaseCoordinator */,
+				2362A4D12167F896000C8046 /* Routable */,
+				2362A4CF2167F538000C8046 /* Presentable.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2362A4D12167F896000C8046 /* Routable */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4D22167F8AA000C8046 /* Routable.swift */,
+				2362A4D92167FDE6000C8046 /* AppRouter.swift */,
+			);
+			path = Routable;
+			sourceTree = "<group>";
+		};
+		2362A4D62167FAFA000C8046 /* BaseCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4D42167FACB000C8046 /* Coordinator.swift */,
+				2362A4D72167FB22000C8046 /* BaseCoordinator.swift */,
+			);
+			path = BaseCoordinator;
+			sourceTree = "<group>";
+		};
 		236A405E2167AF9C0044ACA8 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +133,7 @@
 		236A40692167AF9C0044ACA8 /* RevolutTest */ = {
 			isa = PBXGroup;
 			children = (
+				2362A4CC2167F4D9000C8046 /* ApplicationLayer */,
 				236A406A2167AF9C0044ACA8 /* AppDelegate.swift */,
 				236A406C2167AF9C0044ACA8 /* ViewController.swift */,
 				236A40712167AF9E0044ACA8 /* Assets.xcassets */,
@@ -200,8 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2362A4D52167FACB000C8046 /* Coordinator.swift in Sources */,
+				2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */,
 				236A406D2167AF9C0044ACA8 /* ViewController.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
+				2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */,
+				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
+				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
