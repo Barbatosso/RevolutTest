@@ -28,6 +28,8 @@
 		2362A509216A3E76000C8046 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A508216A3E76000C8046 /* Configurator.swift */; };
 		2362A50B216A3F09000C8046 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A50A216A3F09000C8046 /* ConfigService.swift */; };
 		2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A514216A462D000C8046 /* URLRequest+Encoding.swift */; };
+		2362A51C216A5FB7000C8046 /* FundsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A51B216A5FB7000C8046 /* FundsType.swift */; };
+		2362A51E216A60CB000C8046 /* Funds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A51D216A60CB000C8046 /* Funds.swift */; };
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
@@ -68,6 +70,8 @@
 		2362A508216A3E76000C8046 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		2362A50A216A3F09000C8046 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		2362A514216A462D000C8046 /* URLRequest+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Encoding.swift"; sourceTree = "<group>"; };
+		2362A51B216A5FB7000C8046 /* FundsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsType.swift; sourceTree = "<group>"; };
+		2362A51D216A60CB000C8046 /* Funds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funds.swift; sourceTree = "<group>"; };
 		236A40672167AF9C0044ACA8 /* RevolutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevolutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236A406A2167AF9C0044ACA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				236A406A2167AF9C0044ACA8 /* AppDelegate.swift */,
+				2362A519216A5F9E000C8046 /* Enitites */,
 				2362A4E121689D74000C8046 /* Network */,
 				2362A4CD2167F4E4000C8046 /* CoreLayer */,
 				2362A4F2216A338F000C8046 /* Helpers */,
@@ -258,6 +263,23 @@
 			path = "URLRequest+Encoding";
 			sourceTree = "<group>";
 		};
+		2362A519216A5F9E000C8046 /* Enitites */ = {
+			isa = PBXGroup;
+			children = (
+				2362A51A216A5FA9000C8046 /* Funds */,
+			);
+			path = Enitites;
+			sourceTree = "<group>";
+		};
+		2362A51A216A5FA9000C8046 /* Funds */ = {
+			isa = PBXGroup;
+			children = (
+				2362A51B216A5FB7000C8046 /* FundsType.swift */,
+				2362A51D216A60CB000C8046 /* Funds.swift */,
+			);
+			path = Funds;
+			sourceTree = "<group>";
+		};
 		236A405E2167AF9C0044ACA8 = {
 			isa = PBXGroup;
 			children = (
@@ -405,8 +427,10 @@
 				2362A4F5216A339A000C8046 /* Log.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
+				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
 				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
+				2362A51C216A5FB7000C8046 /* FundsType.swift in Sources */,
 				2362A4EB216A0E00000C8046 /* Mapper.swift in Sources */,
 				2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */,
 				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
