@@ -11,6 +11,6 @@ import Foundation
 struct Funds: FundsType, Decodable {
 
   var base: String
-  var date: Date
+  var date: String
   var rates: [String: Double]
 }

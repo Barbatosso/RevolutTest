@@ -11,7 +11,7 @@ import Foundation
 class ConfigService: Configurator {
 
   lazy var apiUrl: URL = {
-    guard let apiUrlString = currentConfig["api-Url"] as? String,
+    guard let apiUrlString = currentConfig["api-url"] as? String,
       let apiUrl = URL(string: apiUrlString) else {
         fatalError("No API URL found or its incorrect")
     }

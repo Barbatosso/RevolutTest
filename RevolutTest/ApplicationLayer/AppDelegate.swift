@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyBeaver
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    let console = ConsoleDestination()
+    console.minLevel = .verbose
+    log.addDestination(console)
+    let mapper = JsonObjectMapper()
+    let configService = ConfigService()
+    let apiService = ApiService<Funds>(configService: configService, mapper: mapper)
+    let fundsService = FundsServiceImpl(apiService: apiService)
+    fundsService.fetchFunds(for: "EUR") { funds, _ in
+      print(funds)
+    }
     return true
   }
 }

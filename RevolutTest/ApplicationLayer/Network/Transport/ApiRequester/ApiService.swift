@@ -30,16 +30,17 @@ struct ApiService<Result: Decodable>: ApiRequester {
 
   func runRequest(for target: ApiTarget,
                   with completionHandler: @escaping (Result?, Error?) -> Void) {
-    var request = URLRequest(url: configService.apiUrl)
-    request.url?.appendPathComponent(target.path)
+    var request = URLRequest(url: URL(string: "https://revolut.duckdns.org/latest?base=EUR")!)
+//    request.url?.appendPathComponent(target.path)
     request.httpMethod = target.method.rawValue
-    if let parameters = target.getParameters {
-      request.convertToQueryString(parameters: parameters)
-    }
+
+//    if let parameters = target.getParameters {
+//      request.convertToQueryString(parameters: parameters)
+//    }
 
     log.verbose(request.debugDescription)
     queue.async {
-      self.urlSession.dataTask(with: request) { data, _, error in
+      let task = self.urlSession.dataTask(with: request) { data, _, error in
         if let error = error {
           completionHandler(nil, error)
         }
@@ -56,6 +57,7 @@ struct ApiService<Result: Decodable>: ApiRequester {
           completionHandler(nil, error)
         }
       }
+      task.resume()
     }
   }
 }

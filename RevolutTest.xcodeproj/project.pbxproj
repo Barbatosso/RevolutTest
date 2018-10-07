@@ -30,6 +30,8 @@
 		2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A514216A462D000C8046 /* URLRequest+Encoding.swift */; };
 		2362A51C216A5FB7000C8046 /* FundsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A51B216A5FB7000C8046 /* FundsType.swift */; };
 		2362A51E216A60CB000C8046 /* Funds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A51D216A60CB000C8046 /* Funds.swift */; };
+		2362A521216A6297000C8046 /* FundsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A520216A6297000C8046 /* FundsService.swift */; };
+		2362A523216A639B000C8046 /* FundsServiceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A522216A639B000C8046 /* FundsServiceTarget.swift */; };
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
@@ -72,6 +74,8 @@
 		2362A514216A462D000C8046 /* URLRequest+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Encoding.swift"; sourceTree = "<group>"; };
 		2362A51B216A5FB7000C8046 /* FundsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsType.swift; sourceTree = "<group>"; };
 		2362A51D216A60CB000C8046 /* Funds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funds.swift; sourceTree = "<group>"; };
+		2362A520216A6297000C8046 /* FundsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsService.swift; sourceTree = "<group>"; };
+		2362A522216A639B000C8046 /* FundsServiceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsServiceTarget.swift; sourceTree = "<group>"; };
 		236A40672167AF9C0044ACA8 /* RevolutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevolutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236A406A2167AF9C0044ACA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		2362A4E121689D74000C8046 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2362A51F216A628C000C8046 /* Services */,
 				2362A511216A45CD000C8046 /* Transport */,
 			);
 			path = Network;
@@ -278,6 +283,15 @@
 				2362A51D216A60CB000C8046 /* Funds.swift */,
 			);
 			path = Funds;
+			sourceTree = "<group>";
+		};
+		2362A51F216A628C000C8046 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2362A520216A6297000C8046 /* FundsService.swift */,
+				2362A522216A639B000C8046 /* FundsServiceTarget.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		236A405E2167AF9C0044ACA8 = {
@@ -425,6 +439,7 @@
 				2362A509216A3E76000C8046 /* Configurator.swift in Sources */,
 				2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */,
 				2362A4F5216A339A000C8046 /* Log.swift in Sources */,
+				2362A521216A6297000C8046 /* FundsService.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
@@ -435,6 +450,7 @@
 				2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */,
 				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
 				2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */,
+				2362A523216A639B000C8046 /* FundsServiceTarget.swift in Sources */,
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
 				2362A4FB216A3499000C8046 /* LocalizedString.swift in Sources */,
 				2362A4F8216A33D5000C8046 /* ApiError.swift in Sources */,

@@ -11,6 +11,6 @@ import Foundation
 protocol FundsType {
 
   var base: String { get }
-  var date: Date { get }
+  var date: String { get }
   var rates: [String: Double] { get }
 }
