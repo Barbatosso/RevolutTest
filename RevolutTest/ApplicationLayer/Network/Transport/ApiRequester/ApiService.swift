@@ -8,7 +8,9 @@
 
 import Foundation
 
-class ApiService: ApiRequester {
+struct ApiService<Result: Decodable>: ApiRequester {
+
+  typealias Object = Decodable
 
   private let configService: ConfigService
   private let mapper: Mapper
@@ -29,7 +31,7 @@ class ApiService: ApiRequester {
   }()
 
   func runRequest(for target: ApiTarget,
-                  with completionHandler: @escaping (Data?, Error?) -> Void) {
+                  with completionHandler: @escaping (Result?, Error?) -> Void) {
     var request = URLRequest(url: configService.apiUrl)
     request.url?.appendPathComponent(target.path)
     request.httpMethod = target.method.rawValue
@@ -38,7 +40,7 @@ class ApiService: ApiRequester {
     }
 
     log.verbose(request.debugDescription)
-    queue.async { [unowned self] in
+    queue.async {
       self.urlSession.dataTask(with: request) { data, _, error in
         if let error = error {
           completionHandler(nil, error)
@@ -48,8 +50,12 @@ class ApiService: ApiRequester {
           return
         }
         log.verbose([request.description, String(data: data, encoding: .utf8)])
-        defer {
-          completionHandler(data, nil)
+        do {
+          let object: Result? = try self.mapper.result(from: data)
+          completionHandler(object, nil)
+        } catch {
+          log.error(error.localizedDescription)
+          completionHandler(nil, error)
         }
       }
     }

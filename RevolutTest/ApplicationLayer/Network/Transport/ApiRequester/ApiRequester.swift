@@ -10,5 +10,7 @@ import Foundation
 
 protocol ApiRequester {
 
-  func runRequest(for target: ApiTarget, with completionHandler: @escaping(Data?, Error?) -> Void)
+  associatedtype Result: Decodable
+
+  func runRequest(for target: ApiTarget, with completionHandler: @escaping(Result?, Error?) -> Void)
 }
