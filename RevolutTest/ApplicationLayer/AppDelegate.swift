@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let configService = ConfigService()
     let apiService = ApiService<Funds>(configService: configService, mapper: mapper)
     let fundsService = FundsServiceImpl(apiService: apiService)
-    fundsService.fetchFunds(for: "EUR") { funds, _ in
+    fundsService.fetchFunds(for: "CZK") { funds, _ in
       print(funds)
     }
     return true

@@ -30,13 +30,19 @@ struct ApiService<Result: Decodable>: ApiRequester {
 
   func runRequest(for target: ApiTarget,
                   with completionHandler: @escaping (Result?, Error?) -> Void) {
-    var request = URLRequest(url: URL(string: "https://revolut.duckdns.org/latest?base=EUR")!)
-//    request.url?.appendPathComponent(target.path)
+    var request = URLRequest(url: configService.apiUrl)
+    request.url?.appendPathComponent(target.path)
+
+    var urlComponents = URLComponents(url: request.url!, resolvingAgainstBaseURL: false)
+    let percentEncodedQuery = urlComponents?.percentEncodedQuery.map { $0 + "&" } ?? ""
+    urlComponents?.percentEncodedQuery = percentEncodedQuery
+    request.url = urlComponents?.url
+
     request.httpMethod = target.method.rawValue
 
-//    if let parameters = target.getParameters {
-//      request.convertToQueryString(parameters: parameters)
-//    }
+    if let parameters = target.getParameters {
+      request.convertToQueryString(parameters: parameters)
+    }
 
     log.verbose(request.debugDescription)
     queue.async {
@@ -48,7 +54,9 @@ struct ApiService<Result: Decodable>: ApiRequester {
           completionHandler(nil, ApiError.badServerResponse)
           return
         }
+
         log.verbose([request.description, String(data: data, encoding: .utf8)])
+
         do {
           let object: Result? = try self.mapper.result(from: data)
           completionHandler(object, nil)
@@ -57,6 +65,7 @@ struct ApiService<Result: Decodable>: ApiRequester {
           completionHandler(nil, error)
         }
       }
+
       task.resume()
     }
   }

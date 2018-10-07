@@ -17,7 +17,7 @@ enum FundsServiceTarget: ApiTarget {
   }
 
   var path: String {
-    return "latest?"
+    return "latest"
   }
 
   var getParameters: [String: Any]? {
