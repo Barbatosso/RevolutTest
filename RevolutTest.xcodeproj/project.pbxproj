@@ -17,6 +17,16 @@
 		2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4DB2168069D000C8046 /* NavigationRouter.swift */; };
 		2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4E221689DD3000C8046 /* ApiTarget.swift */; };
 		2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4E421689E75000C8046 /* HTTPMethod.swift */; };
+		2362A4EB216A0E00000C8046 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4EA216A0E00000C8046 /* Mapper.swift */; };
+		2362A4F1216A3171000C8046 /* ApiRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4F0216A3171000C8046 /* ApiRequester.swift */; };
+		2362A4F5216A339A000C8046 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4F4216A339A000C8046 /* Log.swift */; };
+		2362A4F8216A33D5000C8046 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4F7216A33D5000C8046 /* ApiError.swift */; };
+		2362A4FB216A3499000C8046 /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4FA216A3499000C8046 /* LocalizedString.swift */; };
+		2362A4FE216A35DC000C8046 /* JsonObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4FD216A35DC000C8046 /* JsonObjectMapper.swift */; };
+		2362A501216A3916000C8046 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A500216A3916000C8046 /* ApiService.swift */; };
+		2362A506216A3DB2000C8046 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2362A505216A3DB2000C8046 /* Config.plist */; };
+		2362A509216A3E76000C8046 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A508216A3E76000C8046 /* Configurator.swift */; };
+		2362A50B216A3F09000C8046 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A50A216A3F09000C8046 /* ConfigService.swift */; };
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
@@ -46,6 +56,16 @@
 		2362A4DB2168069D000C8046 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		2362A4E221689DD3000C8046 /* ApiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTarget.swift; sourceTree = "<group>"; };
 		2362A4E421689E75000C8046 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		2362A4EA216A0E00000C8046 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		2362A4F0216A3171000C8046 /* ApiRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequester.swift; sourceTree = "<group>"; };
+		2362A4F4216A339A000C8046 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		2362A4F7216A33D5000C8046 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		2362A4FA216A3499000C8046 /* LocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		2362A4FD216A35DC000C8046 /* JsonObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonObjectMapper.swift; sourceTree = "<group>"; };
+		2362A500216A3916000C8046 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		2362A505216A3DB2000C8046 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		2362A508216A3E76000C8046 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
+		2362A50A216A3F09000C8046 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		236A40672167AF9C0044ACA8 /* RevolutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevolutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236A406A2167AF9C0044ACA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +99,7 @@
 				236A406A2167AF9C0044ACA8 /* AppDelegate.swift */,
 				2362A4E121689D74000C8046 /* Network */,
 				2362A4CD2167F4E4000C8046 /* CoreLayer */,
+				2362A4F2216A338F000C8046 /* Helpers */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -86,6 +107,7 @@
 		2362A4CD2167F4E4000C8046 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2362A507216A3E5F000C8046 /* ConfigService */,
 				2362A4CE2167F4EB000C8046 /* Coordinator */,
 			);
 			path = CoreLayer;
@@ -123,10 +145,90 @@
 		2362A4E121689D74000C8046 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2362A4FF216A3903000C8046 /* ApiRequester */,
+				2362A4FC216A35BB000C8046 /* Mapper */,
+				2362A4F6216A33CE000C8046 /* Errors */,
 				2362A4E221689DD3000C8046 /* ApiTarget.swift */,
 				2362A4E421689E75000C8046 /* HTTPMethod.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		2362A4F2216A338F000C8046 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4F9216A3490000C8046 /* Localization */,
+				2362A4F3216A3395000C8046 /* Log */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2362A4F3216A3395000C8046 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4F4216A339A000C8046 /* Log.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		2362A4F6216A33CE000C8046 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4F7216A33D5000C8046 /* ApiError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		2362A4F9216A3490000C8046 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4FA216A3499000C8046 /* LocalizedString.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		2362A4FC216A35BB000C8046 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4EA216A0E00000C8046 /* Mapper.swift */,
+				2362A4FD216A35DC000C8046 /* JsonObjectMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		2362A4FF216A3903000C8046 /* ApiRequester */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4F0216A3171000C8046 /* ApiRequester.swift */,
+				2362A500216A3916000C8046 /* ApiService.swift */,
+			);
+			path = ApiRequester;
+			sourceTree = "<group>";
+		};
+		2362A503216A3D51000C8046 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2362A504216A3D6F000C8046 /* Config */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2362A504216A3D6F000C8046 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				236A40762167AF9E0044ACA8 /* Info.plist */,
+				2362A505216A3DB2000C8046 /* Config.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		2362A507216A3E5F000C8046 /* ConfigService */ = {
+			isa = PBXGroup;
+			children = (
+				2362A508216A3E76000C8046 /* Configurator.swift */,
+				2362A50A216A3F09000C8046 /* ConfigService.swift */,
+			);
+			path = ConfigService;
 			sourceTree = "<group>";
 		};
 		236A405E2167AF9C0044ACA8 = {
@@ -152,7 +254,7 @@
 				2362A4CC2167F4D9000C8046 /* ApplicationLayer */,
 				236A40712167AF9E0044ACA8 /* Assets.xcassets */,
 				236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */,
-				236A40762167AF9E0044ACA8 /* Info.plist */,
+				2362A503216A3D51000C8046 /* Resources */,
 			);
 			path = RevolutTest;
 			sourceTree = "<group>";
@@ -219,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */,
+				2362A506216A3DB2000C8046 /* Config.plist in Resources */,
 				236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,14 +373,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				2362A4D52167FACB000C8046 /* Coordinator.swift in Sources */,
+				2362A509216A3E76000C8046 /* Configurator.swift in Sources */,
 				2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */,
+				2362A4F5216A339A000C8046 /* Log.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
+				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
+				2362A4EB216A0E00000C8046 /* Mapper.swift in Sources */,
 				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
 				2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */,
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
+				2362A4FB216A3499000C8046 /* LocalizedString.swift in Sources */,
+				2362A4F8216A33D5000C8046 /* ApiError.swift in Sources */,
+				2362A4F1216A3171000C8046 /* ApiRequester.swift in Sources */,
+				2362A50B216A3F09000C8046 /* ConfigService.swift in Sources */,
 				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,
+				2362A4FE216A35DC000C8046 /* JsonObjectMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +533,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = RevolutTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RevolutTest/Resources/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,7 +555,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = RevolutTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RevolutTest/Resources/Config/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

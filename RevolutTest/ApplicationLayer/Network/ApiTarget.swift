@@ -12,5 +12,5 @@ protocol ApiTarget {
 
   var method: HTTPMethod { get }
   var path: String { get }
-  var parameters: [String: Any]? { get }
+  var parameters: Encodable { get }
 }
