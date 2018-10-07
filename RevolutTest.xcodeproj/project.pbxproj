@@ -15,8 +15,9 @@
 		2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D72167FB22000C8046 /* BaseCoordinator.swift */; };
 		2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D92167FDE6000C8046 /* AppRouter.swift */; };
 		2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4DB2168069D000C8046 /* NavigationRouter.swift */; };
+		2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4E221689DD3000C8046 /* ApiTarget.swift */; };
+		2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4E421689E75000C8046 /* HTTPMethod.swift */; };
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
-		236A406D2167AF9C0044ACA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406C2167AF9C0044ACA8 /* ViewController.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -43,9 +44,10 @@
 		2362A4D72167FB22000C8046 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		2362A4D92167FDE6000C8046 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		2362A4DB2168069D000C8046 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		2362A4E221689DD3000C8046 /* ApiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTarget.swift; sourceTree = "<group>"; };
+		2362A4E421689E75000C8046 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		236A40672167AF9C0044ACA8 /* RevolutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevolutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236A406A2167AF9C0044ACA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		236A406C2167AF9C0044ACA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		236A40742167AF9E0044ACA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		236A40762167AF9E0044ACA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		2362A4CC2167F4D9000C8046 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				236A406A2167AF9C0044ACA8 /* AppDelegate.swift */,
+				2362A4E121689D74000C8046 /* Network */,
 				2362A4CD2167F4E4000C8046 /* CoreLayer */,
 			);
 			path = ApplicationLayer;
@@ -116,6 +120,15 @@
 			path = BaseCoordinator;
 			sourceTree = "<group>";
 		};
+		2362A4E121689D74000C8046 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2362A4E221689DD3000C8046 /* ApiTarget.swift */,
+				2362A4E421689E75000C8046 /* HTTPMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		236A405E2167AF9C0044ACA8 = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				2362A4CC2167F4D9000C8046 /* ApplicationLayer */,
-				236A406A2167AF9C0044ACA8 /* AppDelegate.swift */,
-				236A406C2167AF9C0044ACA8 /* ViewController.swift */,
 				236A40712167AF9E0044ACA8 /* Assets.xcassets */,
 				236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */,
 				236A40762167AF9E0044ACA8 /* Info.plist */,
@@ -261,8 +272,9 @@
 				2362A4D52167FACB000C8046 /* Coordinator.swift in Sources */,
 				2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
-				236A406D2167AF9C0044ACA8 /* ViewController.swift in Sources */,
+				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
+				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
 				2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */,
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
 				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,
