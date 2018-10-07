@@ -148,8 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				2362A511216A45CD000C8046 /* Transport */,
-				2362A4E221689DD3000C8046 /* ApiTarget.swift */,
-				2362A4E421689E75000C8046 /* HTTPMethod.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -234,6 +232,8 @@
 		2362A511216A45CD000C8046 /* Transport */ = {
 			isa = PBXGroup;
 			children = (
+				2362A4E221689DD3000C8046 /* ApiTarget.swift */,
+				2362A4E421689E75000C8046 /* HTTPMethod.swift */,
 				2362A512216A460A000C8046 /* Helpers */,
 				2362A4FC216A35BB000C8046 /* Mapper */,
 				2362A4FF216A3903000C8046 /* ApiRequester */,

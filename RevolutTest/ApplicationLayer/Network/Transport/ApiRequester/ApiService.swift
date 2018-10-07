@@ -10,8 +10,6 @@ import Foundation
 
 struct ApiService<Result: Decodable>: ApiRequester {
 
-  typealias Object = Decodable
-
   private let configService: ConfigService
   private let mapper: Mapper
 
