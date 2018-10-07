@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum HTTPMethod {
+enum HTTPMethod: String {
 
   case get
 }

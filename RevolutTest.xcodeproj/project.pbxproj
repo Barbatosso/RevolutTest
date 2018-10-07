@@ -27,6 +27,7 @@
 		2362A506216A3DB2000C8046 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2362A505216A3DB2000C8046 /* Config.plist */; };
 		2362A509216A3E76000C8046 /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A508216A3E76000C8046 /* Configurator.swift */; };
 		2362A50B216A3F09000C8046 /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A50A216A3F09000C8046 /* ConfigService.swift */; };
+		2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A514216A462D000C8046 /* URLRequest+Encoding.swift */; };
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
@@ -66,6 +67,7 @@
 		2362A505216A3DB2000C8046 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		2362A508216A3E76000C8046 /* Configurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		2362A50A216A3F09000C8046 /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
+		2362A514216A462D000C8046 /* URLRequest+Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Encoding.swift"; sourceTree = "<group>"; };
 		236A40672167AF9C0044ACA8 /* RevolutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevolutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236A406A2167AF9C0044ACA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,9 +147,7 @@
 		2362A4E121689D74000C8046 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				2362A4FF216A3903000C8046 /* ApiRequester */,
-				2362A4FC216A35BB000C8046 /* Mapper */,
-				2362A4F6216A33CE000C8046 /* Errors */,
+				2362A511216A45CD000C8046 /* Transport */,
 				2362A4E221689DD3000C8046 /* ApiTarget.swift */,
 				2362A4E421689E75000C8046 /* HTTPMethod.swift */,
 			);
@@ -229,6 +229,33 @@
 				2362A50A216A3F09000C8046 /* ConfigService.swift */,
 			);
 			path = ConfigService;
+			sourceTree = "<group>";
+		};
+		2362A511216A45CD000C8046 /* Transport */ = {
+			isa = PBXGroup;
+			children = (
+				2362A512216A460A000C8046 /* Helpers */,
+				2362A4FC216A35BB000C8046 /* Mapper */,
+				2362A4FF216A3903000C8046 /* ApiRequester */,
+				2362A4F6216A33CE000C8046 /* Errors */,
+			);
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		2362A512216A460A000C8046 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2362A513216A4614000C8046 /* URLRequest+Encoding */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2362A513216A4614000C8046 /* URLRequest+Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				2362A514216A462D000C8046 /* URLRequest+Encoding.swift */,
+			);
+			path = "URLRequest+Encoding";
 			sourceTree = "<group>";
 		};
 		236A405E2167AF9C0044ACA8 = {
@@ -381,6 +408,7 @@
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
 				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
 				2362A4EB216A0E00000C8046 /* Mapper.swift in Sources */,
+				2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */,
 				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
 				2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */,
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
