@@ -16,16 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    enableLog()
+    return true
+  }
+
+  func enableLog() {
     let console = ConsoleDestination()
     console.minLevel = .verbose
     log.addDestination(console)
-    let mapper = JsonObjectMapper()
-    let configService = ConfigService()
-    let apiService = ApiService<Funds>(configService: configService, mapper: mapper)
-    let fundsService = FundsServiceImpl(apiService: apiService)
-    fundsService.fetchFunds(for: "CZK") { funds, _ in
-      print(funds)
-    }
-    return true
   }
 }

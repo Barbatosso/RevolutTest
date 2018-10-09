@@ -20,7 +20,7 @@ enum FundsServiceTarget: ApiTarget {
     return "latest"
   }
 
-  var getParameters: [String: Any]? {
+  var parameters: [String: Any]? {
     switch self {
     case .funds(let base):
       return ["base": base]

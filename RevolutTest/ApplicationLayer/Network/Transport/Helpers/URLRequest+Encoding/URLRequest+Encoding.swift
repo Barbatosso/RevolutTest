@@ -10,8 +10,9 @@ import Foundation
 
 extension URLRequest {
 
-  mutating func convertToQueryString(parameters: [String: Any]) {
-    guard var urlString = url?.absoluteString else { return }
+  mutating func addQury(parameters: [String: Any]?) {
+    guard var urlString = url?.absoluteString,
+          let parameters = parameters else { return }
     urlString += parameters.map { "\($0)=\($1)"}.joined(separator: "&")
     url = URL(string: urlString)
   }

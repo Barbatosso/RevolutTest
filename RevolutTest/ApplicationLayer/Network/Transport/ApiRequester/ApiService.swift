@@ -39,10 +39,7 @@ struct ApiService<Result: Decodable>: ApiRequester {
     request.url = urlComponents?.url
 
     request.httpMethod = target.method.rawValue
-
-    if let parameters = target.getParameters {
-      request.convertToQueryString(parameters: parameters)
-    }
+    request.addQury(parameters: target.parameters)
 
     log.verbose(request.debugDescription)
     queue.async {
@@ -59,7 +56,9 @@ struct ApiService<Result: Decodable>: ApiRequester {
 
         do {
           let object: Result? = try self.mapper.result(from: data)
-          completionHandler(object, nil)
+          DispatchQueue.main.async {
+            completionHandler(object, nil)
+          }
         } catch {
           log.error(error.localizedDescription)
           completionHandler(nil, error)
