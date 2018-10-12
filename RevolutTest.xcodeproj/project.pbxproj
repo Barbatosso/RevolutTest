@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
+		233A99FA216FDFF1000A5F88 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F9216FDFF1000A5F88 /* RoundImageView.swift */; };
+		233A99FC216FE267000A5F88 /* CellTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99FB216FE267000A5F88 /* CellTitleView.swift */; };
 		2362A4C62167B720000C8046 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
 		2362A4C82167B72B000C8046 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2362A4D02167F538000C8046 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4CF2167F538000C8046 /* Presentable.swift */; };
@@ -32,6 +35,7 @@
 		2362A51E216A60CB000C8046 /* Funds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A51D216A60CB000C8046 /* Funds.swift */; };
 		2362A521216A6297000C8046 /* FundsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A520216A6297000C8046 /* FundsService.swift */; };
 		2362A523216A639B000C8046 /* FundsServiceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A522216A639B000C8046 /* FundsServiceTarget.swift */; };
+		23674226216D307E006D57B8 /* FundsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23674225216D307E006D57B8 /* FundsCoordinator.swift */; };
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
@@ -52,6 +56,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableViewCell.swift; sourceTree = "<group>"; };
+		233A99F9216FDFF1000A5F88 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		233A99FB216FE267000A5F88 /* CellTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTitleView.swift; sourceTree = "<group>"; };
 		2362A4C52167B720000C8046 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		2362A4CF2167F538000C8046 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		2362A4D22167F8AA000C8046 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
@@ -76,6 +83,7 @@
 		2362A51D216A60CB000C8046 /* Funds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funds.swift; sourceTree = "<group>"; };
 		2362A520216A6297000C8046 /* FundsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsService.swift; sourceTree = "<group>"; };
 		2362A522216A639B000C8046 /* FundsServiceTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsServiceTarget.swift; sourceTree = "<group>"; };
+		23674225216D307E006D57B8 /* FundsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsCoordinator.swift; sourceTree = "<group>"; };
 		236A40672167AF9C0044ACA8 /* RevolutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevolutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236A406A2167AF9C0044ACA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +103,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233A99F2216FDDA4000A5F88 /* FundsModule */ = {
+			isa = PBXGroup;
+			children = (
+				233A99F3216FDDB2000A5F88 /* Views */,
+			);
+			path = FundsModule;
+			sourceTree = "<group>";
+		};
+		233A99F3216FDDB2000A5F88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */,
+				233A99FB216FE267000A5F88 /* CellTitleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		233A99F7216FDFC4000A5F88 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				233A99F8216FDFD5000A5F88 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		233A99F8216FDFD5000A5F88 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				233A99F9216FDFF1000A5F88 /* RoundImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2362A4C42167B720000C8046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +335,32 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		23674222216D3049006D57B8 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				233A99F7216FDFC4000A5F88 /* Common */,
+				23674223216D305B006D57B8 /* Flows */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		23674223216D305B006D57B8 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				23674224216D3067006D57B8 /* FundsFlow */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		23674224216D3067006D57B8 /* FundsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				233A99F2216FDDA4000A5F88 /* FundsModule */,
+				23674225216D307E006D57B8 /* FundsCoordinator.swift */,
+			);
+			path = FundsFlow;
+			sourceTree = "<group>";
+		};
 		236A405E2167AF9C0044ACA8 = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +381,7 @@
 		236A40692167AF9C0044ACA8 /* RevolutTest */ = {
 			isa = PBXGroup;
 			children = (
+				23674222216D3049006D57B8 /* PresentationLayer */,
 				2362A4CC2167F4D9000C8046 /* ApplicationLayer */,
 				236A40712167AF9E0044ACA8 /* Assets.xcassets */,
 				236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */,
@@ -447,10 +515,13 @@
 				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
 				2362A51C216A5FB7000C8046 /* FundsType.swift in Sources */,
 				2362A4EB216A0E00000C8046 /* Mapper.swift in Sources */,
+				233A99FC216FE267000A5F88 /* CellTitleView.swift in Sources */,
 				2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */,
+				23674226216D307E006D57B8 /* FundsCoordinator.swift in Sources */,
 				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
 				2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */,
 				2362A523216A639B000C8046 /* FundsServiceTarget.swift in Sources */,
+				233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */,
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
 				2362A4FB216A3499000C8046 /* LocalizedString.swift in Sources */,
 				2362A4F8216A33D5000C8046 /* ApiError.swift in Sources */,
@@ -458,6 +529,7 @@
 				2362A50B216A3F09000C8046 /* ConfigService.swift in Sources */,
 				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,
 				2362A4FE216A35DC000C8046 /* JsonObjectMapper.swift in Sources */,
+				233A99FA216FDFF1000A5F88 /* RoundImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -581,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -602,6 +674,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/RevolutTest/Resources/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,6 +697,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/RevolutTest/Resources/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
