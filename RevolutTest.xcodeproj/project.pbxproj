@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
 		233A99FA216FDFF1000A5F88 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F9216FDFF1000A5F88 /* RoundImageView.swift */; };
-		233A99FC216FE267000A5F88 /* CellTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99FB216FE267000A5F88 /* CellTitleView.swift */; };
-		2362A4C62167B720000C8046 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
-		2362A4C82167B72B000C8046 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedTextField.swift */; };
+		233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
+		233A9A132171DCAA000A5F88 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		233A9A182171DCC9000A5F88 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233A9A152171DCB9000A5F88 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2362A4D02167F538000C8046 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4CF2167F538000C8046 /* Presentable.swift */; };
 		2362A4D32167F8AA000C8046 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D22167F8AA000C8046 /* Routable.swift */; };
 		2362A4D52167FACB000C8046 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D42167FACB000C8046 /* Coordinator.swift */; };
@@ -42,13 +43,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2362A4C92167B72B000C8046 /* Embed Frameworks */ = {
+		233A9A142171DCAA000A5F88 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2362A4C82167B72B000C8046 /* SwiftyBeaver.framework in Embed Frameworks */,
+				233A9A132171DCAA000A5F88 /* SwiftyBeaver.framework in Embed Frameworks */,
+				233A9A182171DCC9000A5F88 /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +60,8 @@
 /* Begin PBXFileReference section */
 		233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableViewCell.swift; sourceTree = "<group>"; };
 		233A99F9216FDFF1000A5F88 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
-		233A99FB216FE267000A5F88 /* CellTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTitleView.swift; sourceTree = "<group>"; };
+		233A9A0D21712434000A5F88 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		233A9A152171DCB9000A5F88 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		2362A4C52167B720000C8046 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		2362A4CF2167F538000C8046 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		2362A4D22167F8AA000C8046 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
@@ -96,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2362A4C62167B720000C8046 /* SwiftyBeaver.framework in Frameworks */,
+				233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */,
-				233A99FB216FE267000A5F88 /* CellTitleView.swift */,
+				233A9A0D21712434000A5F88 /* UnderlinedTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 		2362A4C42167B720000C8046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				233A9A152171DCB9000A5F88 /* SnapKit.framework */,
 				2362A4C52167B720000C8046 /* SwiftyBeaver.framework */,
 			);
 			name = Frameworks;
@@ -400,9 +404,9 @@
 				236A40632167AF9C0044ACA8 /* Sources */,
 				236A40642167AF9C0044ACA8 /* Frameworks */,
 				236A40652167AF9C0044ACA8 /* Resources */,
-				2362A4C92167B72B000C8046 /* Embed Frameworks */,
 				2362A4CA2167B756000C8046 /* Carthage copy script */,
 				2362A4CB2167B9EE000C8046 /* ShellScript */,
+				233A9A142171DCAA000A5F88 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -469,6 +473,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			name = "Carthage copy script";
 			outputFileListPaths = (
@@ -509,13 +514,13 @@
 				2362A4F5216A339A000C8046 /* Log.swift in Sources */,
 				2362A521216A6297000C8046 /* FundsService.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
+				233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
 				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
 				2362A51C216A5FB7000C8046 /* FundsType.swift in Sources */,
 				2362A4EB216A0E00000C8046 /* Mapper.swift in Sources */,
-				233A99FC216FE267000A5F88 /* CellTitleView.swift in Sources */,
 				2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */,
 				23674226216D307E006D57B8 /* FundsCoordinator.swift in Sources */,
 				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
