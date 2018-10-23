@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Funds: FundsType, Decodable {
+class Funds: FundsType {
 
-  var base: String
-  var date: String
-  var rates: [String: Double]
+  let base: String
+  let date: String
+  let rates: [String: Double]
 }

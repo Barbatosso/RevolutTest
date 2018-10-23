@@ -10,20 +10,18 @@ import Foundation
 
 protocol FundsService {
 
-  func fetchFunds(for base: String, with completion: @escaping (FundsType?, Error?) -> Void)
+  func fetchFunds(for base: String, with completion: @escaping (Funds?, Error?) -> Void)
 }
 
 struct FundsServiceImpl: FundsService {
 
-  private let apiService: ApiService<Funds>
+  private let apiService: ApiService
 
-  init(apiService: ApiService<Funds>) {
+  init(apiService: ApiService) {
     self.apiService = apiService
   }
 
-  func fetchFunds(for base: String, with completion: @escaping (FundsType?, Error?) -> Void) {
-    apiService.runRequest(for: FundsServiceTarget.funds(base: base)) { funds, error in
-      completion(funds, error)
-    }
+  func fetchFunds(for base: String, with completion: @escaping (Funds?, Error?) -> Void) {
+    apiService.runRequest(for: FundsServiceTarget.funds(base: base), with: completion)
   }
 }

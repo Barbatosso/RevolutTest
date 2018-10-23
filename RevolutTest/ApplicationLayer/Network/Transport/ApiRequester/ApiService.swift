@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ApiService<Result: Decodable>: ApiRequester {
+struct ApiService: ApiRequester {
 
   private let configService: ConfigService
   private let mapper: Mapper
@@ -28,8 +28,8 @@ struct ApiService<Result: Decodable>: ApiRequester {
     return urlSession
   }()
 
-  func runRequest(for target: ApiTarget,
-                  with completionHandler: @escaping (Result?, Error?) -> Void) {
+  func runRequest<Result: Decodable>(for target: ApiTarget,
+                                     with completionHandler: @escaping (Result?, Error?) -> Void) {
     var request = URLRequest(url: configService.apiUrl)
     request.url?.appendPathComponent(target.path)
 

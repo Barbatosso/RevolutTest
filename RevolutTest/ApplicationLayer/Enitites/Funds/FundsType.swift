@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol FundsType {
+protocol FundsType: Decodable {
 
   var base: String { get }
   var date: String { get }

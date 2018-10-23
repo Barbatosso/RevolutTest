@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
-		233A99FA216FDFF1000A5F88 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F9216FDFF1000A5F88 /* RoundImageView.swift */; };
 		233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedTextField.swift */; };
 		233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
 		233A9A132171DCAA000A5F88 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -40,6 +39,8 @@
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
+		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
+		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,7 +60,6 @@
 
 /* Begin PBXFileReference section */
 		233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableViewCell.swift; sourceTree = "<group>"; };
-		233A99F9216FDFF1000A5F88 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		233A9A0D21712434000A5F88 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
 		233A9A152171DCB9000A5F88 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		2362A4C52167B720000C8046 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
@@ -92,6 +92,8 @@
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		236A40742167AF9E0044ACA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		236A40762167AF9E0044ACA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		23BFB28D217E5DD100A948B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231B3C2E217F9A2F00DA62DB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				23BFB28A217E5B1300A948B6 /* Observable */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		233A99F2216FDDA4000A5F88 /* FundsModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,22 +133,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		233A99F7216FDFC4000A5F88 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				233A99F8216FDFD5000A5F88 /* Views */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		233A99F8216FDFD5000A5F88 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				233A99F9216FDFF1000A5F88 /* RoundImageView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		2362A4C42167B720000C8046 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				236A406A2167AF9C0044ACA8 /* AppDelegate.swift */,
+				231B3C2E217F9A2F00DA62DB /* Common */,
 				2362A519216A5F9E000C8046 /* Enitites */,
 				2362A4E121689D74000C8046 /* Network */,
 				2362A4CD2167F4E4000C8046 /* CoreLayer */,
@@ -342,7 +337,6 @@
 		23674222216D3049006D57B8 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				233A99F7216FDFC4000A5F88 /* Common */,
 				23674223216D305B006D57B8 /* Flows */,
 			);
 			path = PresentationLayer;
@@ -392,6 +386,15 @@
 				2362A503216A3D51000C8046 /* Resources */,
 			);
 			path = RevolutTest;
+			sourceTree = "<group>";
+		};
+		23BFB28A217E5B1300A948B6 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				23BFB28B217E5B2100A948B6 /* Observable.swift */,
+				23BFB28D217E5DD100A948B6 /* Observer.swift */,
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,12 +532,13 @@
 				233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */,
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
 				2362A4FB216A3499000C8046 /* LocalizedString.swift in Sources */,
+				23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */,
 				2362A4F8216A33D5000C8046 /* ApiError.swift in Sources */,
 				2362A4F1216A3171000C8046 /* ApiRequester.swift in Sources */,
 				2362A50B216A3F09000C8046 /* ConfigService.swift in Sources */,
+				23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */,
 				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,
 				2362A4FE216A35DC000C8046 /* JsonObjectMapper.swift in Sources */,
-				233A99FA216FDFF1000A5F88 /* RoundImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
