@@ -35,7 +35,7 @@ class FundsTableViewCell: UITableViewCell {
     return label
   }()
 
-  private let fundsTextField: UITextField = {
+  let fundsTextField: UITextField = {
     let textField = UnderlinedTextField()
     textField.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
     textField.textColor = .black
