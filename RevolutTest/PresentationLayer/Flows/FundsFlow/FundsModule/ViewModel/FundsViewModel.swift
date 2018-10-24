@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+protocol FundsViewModel {
+
+  var numberOfItems: Int { get }
+  var items: [String: Double] { get }
+}
