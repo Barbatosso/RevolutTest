@@ -44,6 +44,8 @@
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
+		239F23D72180B7D600B62B6C /* FundsViewModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F23D62180B7D600B62B6C /* FundsViewModelInput.swift */; };
+		239F23D92180B80700B62B6C /* FundsViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F23D82180B80700B62B6C /* FundsViewModelOutput.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
 		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +104,8 @@
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		236A40742167AF9E0044ACA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		236A40762167AF9E0044ACA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		239F23D62180B7D600B62B6C /* FundsViewModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewModelInput.swift; sourceTree = "<group>"; };
+		239F23D82180B80700B62B6C /* FundsViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewModelOutput.swift; sourceTree = "<group>"; };
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		23BFB28D217E5DD100A948B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				231B3C49217FADC700DA62DB /* FundsViewModel.swift */,
+				239F23D62180B7D600B62B6C /* FundsViewModelInput.swift */,
+				239F23D82180B80700B62B6C /* FundsViewModelOutput.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -583,8 +589,10 @@
 				231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
 				233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */,
+				239F23D92180B80700B62B6C /* FundsViewModelOutput.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
+				239F23D72180B7D600B62B6C /* FundsViewModelInput.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
 				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
 				2362A51C216A5FB7000C8046 /* FundsType.swift in Sources */,

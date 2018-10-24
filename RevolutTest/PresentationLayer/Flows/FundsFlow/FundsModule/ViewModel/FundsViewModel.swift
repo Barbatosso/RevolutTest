@@ -8,24 +8,15 @@
 
 import Foundation
 
-protocol FundsViewModel {
-
-  var numberOfItems: Int { get }
-  var items: [String: Double] { get }
-
-  func changeBaseFundCodeTo(_ code: String)
-  func startPollingFunds()
-}
-
-class FundsViewModelImpl: FundsViewModel {
+class FundsViewModel: FundsViewModelInput {
 
   var fundsService: FundsService
 
   var numberOfItems: Int {
-    return items.count
+    return items.value.count
   }
 
-  var items: [String: Double]
+  var items: Observable<[String: Double]>
 
   private var timer: Timer?
   private let fundCode = Observable<String>(value: "EUR")
@@ -33,7 +24,7 @@ class FundsViewModelImpl: FundsViewModel {
   init(fundsService: FundsService) {
     self.fundsService = fundsService
 
-    items = [:]
+    items = Observable<[String: Double]>(value: [:])
   }
 
   func startPollingFunds() {
@@ -46,5 +37,9 @@ class FundsViewModelImpl: FundsViewModel {
 
   func changeBaseFundCodeTo(_ code: String) {
     fundCode.value = code
+  }
+
+  func addFundsOberver(_ observer: FundsObsrerver) {
+    items.observe(observer.observer, handler: observer.handler)
   }
 }
