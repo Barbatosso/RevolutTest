@@ -31,6 +31,11 @@ class FundsViewModel: FundsViewModelInput {
     timer = Timer(timeInterval: 1.0, repeats: true) { [weak self] _ in
       guard let strongSelf = self else { return }
       strongSelf.fundsService.fetchFunds(for: strongSelf.fundCode.value) { funds, error in
+        if let error = error {
+          return
+        }
+        guard let funds = funds else { return }
+        self?.items.value = funds.rates
       }
     }
   }
