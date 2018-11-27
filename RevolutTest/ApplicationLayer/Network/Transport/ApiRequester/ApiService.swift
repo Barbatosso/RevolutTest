@@ -32,14 +32,10 @@ struct ApiService: ApiRequester {
                                      with completionHandler: @escaping (Result?, Error?) -> Void) {
     var request = URLRequest(url: configService.apiUrl)
     request.url?.appendPathComponent(target.path)
-
-    var urlComponents = URLComponents(url: request.url!, resolvingAgainstBaseURL: false)
-    let percentEncodedQuery = urlComponents?.percentEncodedQuery.map { $0 + "&" } ?? ""
-    urlComponents?.percentEncodedQuery = percentEncodedQuery
-    request.url = urlComponents?.url
+    request.resolvePercentEncodedUrl()
 
     request.httpMethod = target.method.rawValue
-    request.addQury(parameters: target.parameters)
+    request.addQuery(parameters: target.parameters)
 
     log.verbose(request.debugDescription)
     queue.async {

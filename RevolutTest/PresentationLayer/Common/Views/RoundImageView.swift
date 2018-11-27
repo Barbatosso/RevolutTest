@@ -19,9 +19,10 @@ class RoundImageView: UIImageView {
   private func makeRoundCorners() {
     if #available(iOS 11.0, *) {
       layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+      layer.cornerRadius = bounds.width
     } else {
       let roundMaskLayer = CAShapeLayer()
-      roundMaskLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.width * 5).cgPath
+      roundMaskLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: bounds.width * 0.5).cgPath
       layer.mask = roundMaskLayer
     }
   }
