@@ -11,4 +11,5 @@ import Foundation
 protocol Configurator {
 
   var apiUrl: URL { get }
+  var pollServiceDelay: Double { get }
 }

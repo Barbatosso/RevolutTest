@@ -18,6 +18,10 @@ class ConfigService: Configurator {
     return apiUrl
   }()
 
+  lazy var pollServiceDelay: Double = {
+    return 3.0
+  }()
+
   private lazy var currentConfig: [String: Any] = {
     let path = Bundle.main.path(forResource: "Config", ofType: "plist")!
     guard let config = NSDictionary(contentsOfFile: path) as? [String: Any] else {
