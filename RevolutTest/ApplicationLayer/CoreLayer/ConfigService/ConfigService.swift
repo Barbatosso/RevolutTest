@@ -18,7 +18,7 @@ class ConfigService: Configurator {
     return apiUrl
   }()
 
-  lazy var pollServiceDelay: Double = {
+  lazy var pollServiceDebounce: Double = {
     return 3.0
   }()
 
