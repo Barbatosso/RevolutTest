@@ -43,6 +43,7 @@
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
+		239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
 		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		236A40742167AF9E0044ACA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		236A40762167AF9E0044ACA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSettingsService.swift; sourceTree = "<group>"; };
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		23BFB28D217E5DD100A948B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 		2362A4CD2167F4E4000C8046 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				239CBF5D21AF2CE4007EA761 /* SettingsService */,
 				2362A507216A3E5F000C8046 /* ConfigService */,
 				2362A4CE2167F4EB000C8046 /* Coordinator */,
 			);
@@ -448,6 +451,14 @@
 			path = RevolutTest;
 			sourceTree = "<group>";
 		};
+		239CBF5D21AF2CE4007EA761 /* SettingsService */ = {
+			isa = PBXGroup;
+			children = (
+				239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */,
+			);
+			path = SettingsService;
+			sourceTree = "<group>";
+		};
 		23BFB28A217E5B1300A948B6 /* Observable */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,6 +600,7 @@
 				2362A515216A462D000C8046 /* URLRequest+Encoding.swift in Sources */,
 				23674226216D307E006D57B8 /* FundsCoordinator.swift in Sources */,
 				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
+				239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */,
 				2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */,
 				2362A523216A639B000C8046 /* FundsServiceTarget.swift in Sources */,
 				233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */,
