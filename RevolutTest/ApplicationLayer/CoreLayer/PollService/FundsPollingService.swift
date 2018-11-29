@@ -1,5 +1,5 @@
 //
-//  PollService.swift
+//  FundsPollingService.swift
 //  RevolutTest
 //
 //  Created by Egor Petrov on 28/11/2018.
@@ -8,11 +8,9 @@
 
 import Foundation
 
-protocol PollService {
+protocol FundsPollingService {
 
-  associatedtype Value: Decodable
-
-  var onValueUpdate: (Value) -> Void { get set }
+  var onValueUpdate: ((Funds) -> Void) { get set }
 
   func startPollingWith(parameter: String)
 
