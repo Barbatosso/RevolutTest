@@ -52,6 +52,7 @@
 		23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */; };
 		23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */; };
 		23FF285E21B2ED58002C06AE /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285D21B2ED58002C06AE /* Row.swift */; };
+		23FF286021B2F0A1002C06AE /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285F21B2F0A1002C06AE /* TableRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartFundsRequestParameters.swift; sourceTree = "<group>"; };
 		23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		23FF285D21B2ED58002C06AE /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		23FF285F21B2F0A1002C06AE /* TableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -551,6 +553,7 @@
 			isa = PBXGroup;
 			children = (
 				23FF285D21B2ED58002C06AE /* Row.swift */,
+				23FF285F21B2F0A1002C06AE /* TableRow.swift */,
 			);
 			path = TableRow;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
 				23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */,
 				239CBF6221AF341E007EA761 /* PollingService.swift in Sources */,
+				23FF286021B2F0A1002C06AE /* TableRow.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
 				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
 				2362A51C216A5FB7000C8046 /* FundsType.swift in Sources */,
