@@ -50,6 +50,8 @@
 		23E6B1D221B0878500964B1D /* RevolutTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* RevolutTestTests.swift */; };
 		23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */; };
 		23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */; };
+		23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */; };
+		23FF285E21B2ED58002C06AE /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285D21B2ED58002C06AE /* Row.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +126,8 @@
 		23E6B1D321B0878500964B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsPollingService.swift; sourceTree = "<group>"; };
 		23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartFundsRequestParameters.swift; sourceTree = "<group>"; };
+		23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		23FF285D21B2ED58002C06AE /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		231B3C36217FA13C00DA62DB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				23FF285821B2EC66002C06AE /* TableViewDataSource */,
 				231B3C44217FA9BB00DA62DB /* Protocols */,
 				231B3C37217FA13C00DA62DB /* Views */,
 			);
@@ -525,6 +530,31 @@
 			path = FundsPollingService;
 			sourceTree = "<group>";
 		};
+		23FF285821B2EC66002C06AE /* TableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				23FF285C21B2ED4A002C06AE /* TableRow */,
+				23FF285921B2EC80002C06AE /* ConfigurableCell */,
+			);
+			path = TableViewDataSource;
+			sourceTree = "<group>";
+		};
+		23FF285921B2EC80002C06AE /* ConfigurableCell */ = {
+			isa = PBXGroup;
+			children = (
+				23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */,
+			);
+			path = ConfigurableCell;
+			sourceTree = "<group>";
+		};
+		23FF285C21B2ED4A002C06AE /* TableRow */ = {
+			isa = PBXGroup;
+			children = (
+				23FF285D21B2ED58002C06AE /* Row.swift */,
+			);
+			path = TableRow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -681,6 +711,7 @@
 				233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
+				23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */,
 				239CBF6221AF341E007EA761 /* PollingService.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
 				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
@@ -704,6 +735,7 @@
 				23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */,
 				23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */,
 				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,
+				23FF285E21B2ED58002C06AE /* Row.swift in Sources */,
 				2362A4FE216A35DC000C8046 /* JsonObjectMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
