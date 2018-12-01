@@ -44,10 +44,11 @@
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
 		239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */; };
-		239CBF6221AF341E007EA761 /* FundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF6121AF341E007EA761 /* FundsPollingService.swift */; };
+		239CBF6221AF341E007EA761 /* PollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF6121AF341E007EA761 /* PollingService.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
 		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
 		23E6B1D221B0878500964B1D /* RevolutTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* RevolutTestTests.swift */; };
+		23FF284A21B2DA24002C06AE /* PollServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284921B2DA24002C06AE /* PollServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,12 +115,13 @@
 		236A40742167AF9E0044ACA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		236A40762167AF9E0044ACA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSettingsService.swift; sourceTree = "<group>"; };
-		239CBF6121AF341E007EA761 /* FundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsPollingService.swift; sourceTree = "<group>"; };
+		239CBF6121AF341E007EA761 /* PollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingService.swift; sourceTree = "<group>"; };
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		23BFB28D217E5DD100A948B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		23E6B1CF21B0878500964B1D /* RevolutTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevolutTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E6B1D121B0878500964B1D /* RevolutTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutTestTests.swift; sourceTree = "<group>"; };
 		23E6B1D321B0878500964B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23FF284921B2DA24002C06AE /* PollServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +245,6 @@
 		2362A4CD2167F4E4000C8046 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
-				239CBF6021AF33FB007EA761 /* PollService */,
 				239CBF5D21AF2CE4007EA761 /* SettingsService */,
 				2362A507216A3E5F000C8046 /* ConfigService */,
 				2362A4CE2167F4EB000C8046 /* Coordinator */,
@@ -283,6 +284,7 @@
 		2362A4E121689D74000C8046 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				239CBF6021AF33FB007EA761 /* PollService */,
 				2362A51F216A628C000C8046 /* Services */,
 				2362A511216A45CD000C8046 /* Transport */,
 			);
@@ -488,7 +490,8 @@
 		239CBF6021AF33FB007EA761 /* PollService */ = {
 			isa = PBXGroup;
 			children = (
-				239CBF6121AF341E007EA761 /* FundsPollingService.swift */,
+				239CBF6121AF341E007EA761 /* PollingService.swift */,
+				23FF284921B2DA24002C06AE /* PollServiceError.swift */,
 			);
 			path = PollService;
 			sourceTree = "<group>";
@@ -666,7 +669,7 @@
 				233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
-				239CBF6221AF341E007EA761 /* FundsPollingService.swift in Sources */,
+				239CBF6221AF341E007EA761 /* PollingService.swift in Sources */,
 				236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */,
 				2362A501216A3916000C8046 /* ApiService.swift in Sources */,
 				2362A51C216A5FB7000C8046 /* FundsType.swift in Sources */,
@@ -681,6 +684,7 @@
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
 				231B3C39217FA13C00DA62DB /* RoundImageView.swift in Sources */,
 				231B3C3F217FA44B00DA62DB /* FundsModule.swift in Sources */,
+				23FF284A21B2DA24002C06AE /* PollServiceError.swift in Sources */,
 				2362A4FB216A3499000C8046 /* LocalizedString.swift in Sources */,
 				23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */,
 				2362A4F8216A33D5000C8046 /* ApiError.swift in Sources */,
