@@ -50,6 +50,7 @@
 		23E6B1D221B0878500964B1D /* RevolutTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* RevolutTestTests.swift */; };
 		23FF284A21B2DA24002C06AE /* PollServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284921B2DA24002C06AE /* PollServiceError.swift */; };
 		23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */; };
+		23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		23E6B1D321B0878500964B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23FF284921B2DA24002C06AE /* PollServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollServiceError.swift; sourceTree = "<group>"; };
 		23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsPollingService.swift; sourceTree = "<group>"; };
+		23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartFundsRequestParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				239CBF6021AF33FB007EA761 /* PollService */,
-				239CBF5D21AF2CE4007EA761 /* SettingsService */,
+				239CBF5D21AF2CE4007EA761 /* RequestSettingsService */,
 				2362A507216A3E5F000C8046 /* ConfigService */,
 				2362A4CE2167F4EB000C8046 /* Coordinator */,
 			);
@@ -482,12 +484,13 @@
 			path = RevolutTest;
 			sourceTree = "<group>";
 		};
-		239CBF5D21AF2CE4007EA761 /* SettingsService */ = {
+		239CBF5D21AF2CE4007EA761 /* RequestSettingsService */ = {
 			isa = PBXGroup;
 			children = (
 				239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */,
+				23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */,
 			);
-			path = SettingsService;
+			path = RequestSettingsService;
 			sourceTree = "<group>";
 		};
 		239CBF6021AF33FB007EA761 /* PollService */ = {
@@ -674,6 +677,7 @@
 				2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */,
 				2362A4F5216A339A000C8046 /* Log.swift in Sources */,
 				2362A521216A6297000C8046 /* FundsService.swift in Sources */,
+				23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */,
 				231B3C47217FA9E200DA62DB /* ViewHolder.swift in Sources */,
 				231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
