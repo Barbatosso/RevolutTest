@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class FundsTableViewCell: UITableViewCell {
+class FundsTableViewCell: UITableViewCell, ConfigurableCell {
 
   private let imageSizeDimension = 60
 
@@ -93,5 +93,11 @@ class FundsTableViewCell: UITableViewCell {
 
   func setNewFund(value: Double) {
     fundsTextField.text = String(value)
+  }
+
+  func configure(with data: FundsItem) {
+    flagImageView.image = UIImage(named: data.fundsCode)
+    fundTitleLabel.text = data.fundsCode
+    fundsTextField.text = String(data.value)
   }
 }

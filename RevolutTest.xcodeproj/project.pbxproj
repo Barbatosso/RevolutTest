@@ -43,6 +43,9 @@
 		236A406B2167AF9C0044ACA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236A406A2167AF9C0044ACA8 /* AppDelegate.swift */; };
 		236A40722167AF9E0044ACA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236A40712167AF9E0044ACA8 /* Assets.xcassets */; };
 		236A40752167AF9E0044ACA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 236A40732167AF9E0044ACA8 /* LaunchScreen.storyboard */; };
+		237DB91B21B43B52007E54F3 /* FundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB91A21B43B52007E54F3 /* FundsViewModel.swift */; };
+		237DB91E21B43D57007E54F3 /* FundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB91D21B43D57007E54F3 /* FundsViewController.swift */; };
+		237DB92121B43EEA007E54F3 /* FundsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB92021B43EEA007E54F3 /* FundsItem.swift */; };
 		239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */; };
 		239CBF6221AF341E007EA761 /* PollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF6121AF341E007EA761 /* PollingService.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
@@ -122,6 +125,9 @@
 		236A40712167AF9E0044ACA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		236A40742167AF9E0044ACA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		236A40762167AF9E0044ACA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		237DB91A21B43B52007E54F3 /* FundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewModel.swift; sourceTree = "<group>"; };
+		237DB91D21B43D57007E54F3 /* FundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewController.swift; sourceTree = "<group>"; };
+		237DB92021B43EEA007E54F3 /* FundsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsItem.swift; sourceTree = "<group>"; };
 		239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSettingsService.swift; sourceTree = "<group>"; };
 		239CBF6121AF341E007EA761 /* PollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingService.swift; sourceTree = "<group>"; };
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -222,6 +228,8 @@
 		233A99F2216FDDA4000A5F88 /* FundsModule */ = {
 			isa = PBXGroup;
 			children = (
+				237DB91C21B43D4C007E54F3 /* FundsViewController */,
+				237DB91921B43B47007E54F3 /* ViewModel */,
 				233A99F3216FDDB2000A5F88 /* Views */,
 				231B3C3E217FA44B00DA62DB /* FundsModule.swift */,
 			);
@@ -497,6 +505,31 @@
 			path = RevolutTest;
 			sourceTree = "<group>";
 		};
+		237DB91921B43B47007E54F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				237DB91F21B43ED4007E54F3 /* FundsRow */,
+				237DB91A21B43B52007E54F3 /* FundsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		237DB91C21B43D4C007E54F3 /* FundsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				237DB91D21B43D57007E54F3 /* FundsViewController.swift */,
+			);
+			path = FundsViewController;
+			sourceTree = "<group>";
+		};
+		237DB91F21B43ED4007E54F3 /* FundsRow */ = {
+			isa = PBXGroup;
+			children = (
+				237DB92021B43EEA007E54F3 /* FundsItem.swift */,
+			);
+			path = FundsRow;
+			sourceTree = "<group>";
+		};
 		239CBF5D21AF2CE4007EA761 /* RequestSettingsService */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,9 +770,11 @@
 				2362A521216A6297000C8046 /* FundsService.swift in Sources */,
 				23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */,
 				23FF286C21B409FD002C06AE /* TableManager.swift in Sources */,
+				237DB91B21B43B52007E54F3 /* FundsViewModel.swift in Sources */,
 				231B3C47217FA9E200DA62DB /* ViewHolder.swift in Sources */,
 				231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
+				237DB92121B43EEA007E54F3 /* FundsItem.swift in Sources */,
 				23FF286621B2F28F002C06AE /* TableDelegate.swift in Sources */,
 				233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
@@ -766,6 +801,7 @@
 				2362A4F8216A33D5000C8046 /* ApiError.swift in Sources */,
 				2362A4F1216A3171000C8046 /* ApiRequester.swift in Sources */,
 				2362A50B216A3F09000C8046 /* ConfigService.swift in Sources */,
+				237DB91E21B43D57007E54F3 /* FundsViewController.swift in Sources */,
 				23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */,
 				23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */,
 				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,

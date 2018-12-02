@@ -10,7 +10,7 @@ import UIKit
 
 protocol ConfigurableCell {
 
-  static var requseId: String { get }
+  static var reuseId: String { get }
 
   associatedtype CellData: Equatable
 
