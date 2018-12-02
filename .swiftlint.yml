@@ -3,6 +3,7 @@ excluded:
 
 disabled_rules:
   - force_cast
+  - weak_delegate
 
 nesting:
  type_level:

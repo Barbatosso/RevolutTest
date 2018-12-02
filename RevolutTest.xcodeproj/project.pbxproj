@@ -53,6 +53,10 @@
 		23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */; };
 		23FF285E21B2ED58002C06AE /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285D21B2ED58002C06AE /* Row.swift */; };
 		23FF286021B2F0A1002C06AE /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285F21B2F0A1002C06AE /* TableRow.swift */; };
+		23FF286321B2F26C002C06AE /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF286221B2F26C002C06AE /* TableDataSource.swift */; };
+		23FF286621B2F28F002C06AE /* TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF286521B2F28F002C06AE /* TableDelegate.swift */; };
+		23FF286A21B408F6002C06AE /* TableViewCellRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF286921B408F6002C06AE /* TableViewCellRegistrar.swift */; };
+		23FF286C21B409FD002C06AE /* TableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF286B21B409FD002C06AE /* TableManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,10 @@
 		23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		23FF285D21B2ED58002C06AE /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		23FF285F21B2F0A1002C06AE /* TableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRow.swift; sourceTree = "<group>"; };
+		23FF286221B2F26C002C06AE /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
+		23FF286521B2F28F002C06AE /* TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDelegate.swift; sourceTree = "<group>"; };
+		23FF286921B408F6002C06AE /* TableViewCellRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRegistrar.swift; sourceTree = "<group>"; };
+		23FF286B21B409FD002C06AE /* TableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +170,7 @@
 		231B3C36217FA13C00DA62DB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				23FF285821B2EC66002C06AE /* TableViewDataSource */,
+				23FF285821B2EC66002C06AE /* TableManager */,
 				231B3C44217FA9BB00DA62DB /* Protocols */,
 				231B3C37217FA13C00DA62DB /* Views */,
 			);
@@ -532,13 +540,17 @@
 			path = FundsPollingService;
 			sourceTree = "<group>";
 		};
-		23FF285821B2EC66002C06AE /* TableViewDataSource */ = {
+		23FF285821B2EC66002C06AE /* TableManager */ = {
 			isa = PBXGroup;
 			children = (
+				23FF286421B2F284002C06AE /* TableDelegate */,
+				23FF286121B2F258002C06AE /* TableDataSource */,
 				23FF285C21B2ED4A002C06AE /* TableRow */,
 				23FF285921B2EC80002C06AE /* ConfigurableCell */,
+				23FF286921B408F6002C06AE /* TableViewCellRegistrar.swift */,
+				23FF286B21B409FD002C06AE /* TableManager.swift */,
 			);
-			path = TableViewDataSource;
+			path = TableManager;
 			sourceTree = "<group>";
 		};
 		23FF285921B2EC80002C06AE /* ConfigurableCell */ = {
@@ -556,6 +568,22 @@
 				23FF285F21B2F0A1002C06AE /* TableRow.swift */,
 			);
 			path = TableRow;
+			sourceTree = "<group>";
+		};
+		23FF286121B2F258002C06AE /* TableDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				23FF286221B2F26C002C06AE /* TableDataSource.swift */,
+			);
+			path = TableDataSource;
+			sourceTree = "<group>";
+		};
+		23FF286421B2F284002C06AE /* TableDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				23FF286521B2F28F002C06AE /* TableDelegate.swift */,
+			);
+			path = TableDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -708,9 +736,11 @@
 				2362A4F5216A339A000C8046 /* Log.swift in Sources */,
 				2362A521216A6297000C8046 /* FundsService.swift in Sources */,
 				23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */,
+				23FF286C21B409FD002C06AE /* TableManager.swift in Sources */,
 				231B3C47217FA9E200DA62DB /* ViewHolder.swift in Sources */,
 				231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
+				23FF286621B2F28F002C06AE /* TableDelegate.swift in Sources */,
 				233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
@@ -740,7 +770,9 @@
 				23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */,
 				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,
 				23FF285E21B2ED58002C06AE /* Row.swift in Sources */,
+				23FF286321B2F26C002C06AE /* TableDataSource.swift in Sources */,
 				2362A4FE216A35DC000C8046 /* JsonObjectMapper.swift in Sources */,
+				23FF286A21B408F6002C06AE /* TableViewCellRegistrar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
