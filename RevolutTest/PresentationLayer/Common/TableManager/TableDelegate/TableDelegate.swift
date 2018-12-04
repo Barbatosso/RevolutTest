@@ -28,12 +28,12 @@ class TableDelegateImpl: NSObject, TableDelegate, UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let rows = tableManager?.rows else { return }
 
-    tableView.beginUpdates()
-    tableView.moveRow(at: indexPath, to: IndexPath(row: 0, section: indexPath.section))
-    tableView.endUpdates()
-
     if rows[indexPath.row].onTap() {
       tableView.deselectRow(at: indexPath, animated: true)
     }
+
+    tableView.beginUpdates()
+    tableView.moveRow(at: indexPath, to: IndexPath(row: 0, section: indexPath.section))
+    tableView.endUpdates()
   }
 }

@@ -45,13 +45,33 @@ class FundsViewController: UIViewController, FundsModule, ViewHolder {
   }
 
   private func bind(_ funds: FundsType) {
-    tableManager.removeAll()
-    let rows = funds.rates.map { item -> TableRow<FundsTableViewCell> in
+    if tableManager.isEmpty {
+      firstTableSetup(with: funds)
+    }
+  }
+
+  private func firstTableSetup(with funds: FundsType) {
+    var rows = funds.rates.map { [weak self] item -> TableRow<FundsTableViewCell> in
       let rowItem = FundsItem(fundsCode: item.key, value: item.value)
-      let row = TableRow<FundsTableViewCell>(data: rowItem)
+      let row = FundsTableRow(data: rowItem)
+      self?.configureObserver(for: row, with: item.key)
       return row
     }
+    let rowItem = viewModel.standartRowData
+    let row = FundsTableRow(data: rowItem)
+    configureObserver(for: row, with: rowItem.fundsCode)
+    rows.insert(row, at: 0)
     tableManager.append(newRows: rows)
     tableManager.reload()
+    viewModel.viewIsReady(true)
+  }
+
+  private func configureObserver(for row: FundsTableRow, with currencyCode: String) {
+    viewModel.addFundsObserver(for: row) { funds in
+      guard let funds = funds,
+        let value = funds.rates[currencyCode]
+        else { return }
+      row.observer?(value)
+    }
   }
 }

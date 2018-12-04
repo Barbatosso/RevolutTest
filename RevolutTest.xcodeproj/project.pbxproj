@@ -49,6 +49,7 @@
 		237DB92321B47AC0007E54F3 /* FundsModuleFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB92221B47AC0007E54F3 /* FundsModuleFabric.swift */; };
 		239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */; };
 		239CBF6221AF341E007EA761 /* PollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF6121AF341E007EA761 /* PollingService.swift */; };
+		23B1588E21B657260057EF4F /* FundsTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1588D21B657260057EF4F /* FundsTableRow.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
 		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
 		23E6B1D221B0878500964B1D /* RevolutTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* RevolutTestTests.swift */; };
@@ -132,6 +133,7 @@
 		237DB92221B47AC0007E54F3 /* FundsModuleFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsModuleFabric.swift; sourceTree = "<group>"; };
 		239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSettingsService.swift; sourceTree = "<group>"; };
 		239CBF6121AF341E007EA761 /* PollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingService.swift; sourceTree = "<group>"; };
+		23B1588D21B657260057EF4F /* FundsTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableRow.swift; sourceTree = "<group>"; };
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		23BFB28D217E5DD100A948B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		23E6B1CF21B0878500964B1D /* RevolutTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevolutTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -529,6 +531,7 @@
 			isa = PBXGroup;
 			children = (
 				237DB92021B43EEA007E54F3 /* FundsItem.swift */,
+				23B1588D21B657260057EF4F /* FundsTableRow.swift */,
 			);
 			path = FundsRow;
 			sourceTree = "<group>";
@@ -812,6 +815,7 @@
 				23FF285E21B2ED58002C06AE /* Row.swift in Sources */,
 				23FF286321B2F26C002C06AE /* TableDataSource.swift in Sources */,
 				2362A4FE216A35DC000C8046 /* JsonObjectMapper.swift in Sources */,
+				23B1588E21B657260057EF4F /* FundsTableRow.swift in Sources */,
 				23FF286A21B408F6002C06AE /* TableViewCellRegistrar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,13 +10,19 @@ import Foundation
 
 class Observable<T> {
 
-  typealias Handler = (T) -> Void
+  typealias Handler = (T?) -> Void
 
-  var value: T
+  var value: T? {
+    didSet {
+      observers.forEach {
+        $0.handler(value)
+      }
+    }
+  }
 
   private lazy var observers = [Observer<T>]()
 
-  init(value: T) {
+  init(value: T?) {
     self.value = value
   }
 

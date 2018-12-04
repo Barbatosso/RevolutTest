@@ -10,7 +10,7 @@ import Foundation
 
 struct Observer<T> {
 
-  typealias Handler = (T) -> Void
+  typealias Handler = (T?) -> Void
 
   weak var onwer: AnyObject?
 
