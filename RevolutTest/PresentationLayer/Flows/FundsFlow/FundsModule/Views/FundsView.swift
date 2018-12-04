@@ -11,7 +11,7 @@ import SnapKit
 
 class FundsView: UIView {
 
-  private let tableView: UITableView = {
+  let tableView: UITableView = {
     let tableView = UITableView(frame: .zero, style: .plain)
     tableView.estimatedRowHeight = 44
     tableView.rowHeight = UITableView.automaticDimension
@@ -20,6 +20,8 @@ class FundsView: UIView {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
+
+    setupInitialLayout()
   }
 
   required init?(coder aDecoder: NSCoder) {
@@ -31,10 +33,5 @@ class FundsView: UIView {
     tableView.snp.makeConstraints { make in
       make.edges.equalToSuperview()
     }
-  }
-
-  func configure(with dataSource: UITableViewDataSource, and delegate: UITableViewDelegate) {
-    tableView.dataSource = dataSource
-    tableView.delegate = delegate
   }
 }

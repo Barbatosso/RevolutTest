@@ -12,4 +12,8 @@ struct FundsItem: Equatable {
 
   let fundsCode: String
   let value: Double
+
+  static func == (lhs: FundsItem, rhs: FundsItem) -> Bool {
+    return lhs.fundsCode == rhs.fundsCode
+  }
 }

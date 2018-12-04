@@ -17,5 +17,9 @@ class FundsCoordinatorImpl: BaseCoordinator, FundsCoordinator {
   }
 
   private func showFundsModule() {
+    let assembly = FundsModuleFabric()
+
+    let module = assembly.assemble()
+    router.setRoot(module)
   }
 }

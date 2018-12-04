@@ -16,10 +16,14 @@ protocol TableManager: class {
 
   var tableView: UITableView? { get }
 
+  func connect(to tableView: UITableView, with tableDataSource: TableDataSource.Type, tableDelegate: TableDelegate.Type)
+
   func append(newRow: Row)
   func append(newRows: [Row])
 
   func removeAll()
+
+  func reload()
 }
 
 class TableManagerImpl: TableManager {
@@ -30,12 +34,16 @@ class TableManagerImpl: TableManager {
     return rows.isEmpty
   }
 
-  private(set) weak var tableView: UITableView?
+  weak var tableView: UITableView?
 
   private var tableDataSource: TableDataSource?
   private var tableDelegate: TableDelegate?
 
-  init(tableView: UITableView, tableDataSource: TableDataSource.Type, tableDelegate: TableDelegate.Type) {
+  func connect(
+    to tableView: UITableView,
+    with tableDataSource: TableDataSource.Type,
+    tableDelegate: TableDelegate.Type
+    ) {
     self.tableView = tableView
     self.tableDataSource = tableDataSource.init(tableManager: self)
     self.tableDelegate = tableDelegate.init(tableManager: self)
@@ -51,5 +59,9 @@ class TableManagerImpl: TableManager {
 
   func removeAll() {
     rows.removeAll()
+  }
+
+  func reload() {
+    tableView?.reloadData()
   }
 }

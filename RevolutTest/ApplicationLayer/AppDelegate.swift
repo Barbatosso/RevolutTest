@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     enableLog()
+
+    window = UIWindow(frame: UIScreen.main.bounds)
+    window?.backgroundColor = .white
+    let appRouter = AppRouter(window: window)
+    let coordinator = FundsCoordinatorImpl(router: appRouter)
+    coordinator.start()
+    window?.makeKeyAndVisible()
     return true
   }
 

@@ -46,6 +46,7 @@
 		237DB91B21B43B52007E54F3 /* FundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB91A21B43B52007E54F3 /* FundsViewModel.swift */; };
 		237DB91E21B43D57007E54F3 /* FundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB91D21B43D57007E54F3 /* FundsViewController.swift */; };
 		237DB92121B43EEA007E54F3 /* FundsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB92021B43EEA007E54F3 /* FundsItem.swift */; };
+		237DB92321B47AC0007E54F3 /* FundsModuleFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB92221B47AC0007E54F3 /* FundsModuleFabric.swift */; };
 		239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */; };
 		239CBF6221AF341E007EA761 /* PollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF6121AF341E007EA761 /* PollingService.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
@@ -128,6 +129,7 @@
 		237DB91A21B43B52007E54F3 /* FundsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewModel.swift; sourceTree = "<group>"; };
 		237DB91D21B43D57007E54F3 /* FundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewController.swift; sourceTree = "<group>"; };
 		237DB92021B43EEA007E54F3 /* FundsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsItem.swift; sourceTree = "<group>"; };
+		237DB92221B47AC0007E54F3 /* FundsModuleFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsModuleFabric.swift; sourceTree = "<group>"; };
 		239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSettingsService.swift; sourceTree = "<group>"; };
 		239CBF6121AF341E007EA761 /* PollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingService.swift; sourceTree = "<group>"; };
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				237DB91921B43B47007E54F3 /* ViewModel */,
 				233A99F3216FDDB2000A5F88 /* Views */,
 				231B3C3E217FA44B00DA62DB /* FundsModule.swift */,
+				237DB92221B47AC0007E54F3 /* FundsModuleFabric.swift */,
 			);
 			path = FundsModule;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				23FF286C21B409FD002C06AE /* TableManager.swift in Sources */,
 				237DB91B21B43B52007E54F3 /* FundsViewModel.swift in Sources */,
 				231B3C47217FA9E200DA62DB /* ViewHolder.swift in Sources */,
+				237DB92321B47AC0007E54F3 /* FundsModuleFabric.swift in Sources */,
 				231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
 				237DB92121B43EEA007E54F3 /* FundsItem.swift in Sources */,
