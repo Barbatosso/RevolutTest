@@ -13,7 +13,7 @@ class UnderlinedTextField: UITextField {
   private let lineView: UIView = {
     let view = UIView()
     view.isUserInteractionEnabled = false
-    view.backgroundColor = .black
+    view.backgroundColor = .lightGray
     return view
   }()
 

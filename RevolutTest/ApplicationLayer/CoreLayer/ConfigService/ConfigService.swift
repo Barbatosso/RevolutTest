@@ -19,7 +19,7 @@ class ConfigService: Configurator {
   }()
 
   lazy var pollServiceDebounce: Double = {
-    return 3.0
+    return 1.0
   }()
 
   private lazy var currentConfig: [String: Any] = {

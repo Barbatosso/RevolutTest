@@ -39,8 +39,9 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     let textField = UnderlinedTextField()
     textField.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
     textField.textColor = .black
-    textField.textAlignment = .left
+    textField.textAlignment = .right
     textField.isEnabled = false
+    textField.keyboardType = .numberPad
     return textField
   }()
 
@@ -48,14 +49,16 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     super.becomeFirstResponder()
 
     fundsTextField.isEnabled = true
-    return fundsTextField.becomeFirstResponder()
+    fundsTextField.becomeFirstResponder()
+    return true
   }
 
   override func resignFirstResponder() -> Bool {
     super.resignFirstResponder()
 
     fundsTextField.isEnabled = false
-    return fundsTextField.resignFirstResponder()
+    fundsTextField.resignFirstResponder()
+    return true
   }
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -85,7 +88,7 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
 
     fundsTextField.snp.makeConstraints { make in
       make.centerY.equalToSuperview()
-      make.leading.equalTo(fundTitleLabel.snp.trailingMargin)
+      make.leading.greaterThanOrEqualTo(fundTitleLabel.snp.trailing)
       make.trailing.equalTo(snp.trailingMargin)
     }
   }

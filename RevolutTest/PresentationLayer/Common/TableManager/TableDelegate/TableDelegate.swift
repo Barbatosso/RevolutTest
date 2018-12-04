@@ -47,4 +47,8 @@ class TableDelegateImpl: NSObject, TableDelegate, UITableViewDelegate {
     rows.insert(row, at: 0)
     tableManager?.rows = rows
   }
+
+  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    tableManager?.tableView?.visibleCells.first?.resignFirstResponder()
+  }
 }
