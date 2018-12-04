@@ -28,6 +28,7 @@ class Observable<T> {
 
   func observe(_ observer: AnyObject, handler: @escaping Handler) {
     cleanDeadObservers()
+    removeObserver(observer)
     observers.append(Observer(owner: observer, handler: handler))
   }
 
@@ -42,5 +43,9 @@ class Observable<T> {
 
   private func cleanAllObservers() {
     observers.removeAll()
+  }
+
+  private func removeObserver(_ observer: AnyObject) {
+    observers.removeAll { $0.onwer === observer }
   }
 }

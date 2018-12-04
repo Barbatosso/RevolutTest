@@ -10,8 +10,10 @@ import Foundation
 
 protocol FundsViewModel: class {
 
+  var funds: Observable<FundsType> { get }
   var standartRowData: FundsItem { get }
   func getFunds(with handler: @escaping (FundsType?, Error?) -> Void)
+  func updateCurrencyCode(_ currencyCode: String)
 
   func addFundsObserver(for observer: AnyObject, with handler: @escaping (FundsType?) -> Void)
 
@@ -20,7 +22,7 @@ protocol FundsViewModel: class {
 
 class FundsViewModelImpl: FundsViewModel {
 
-  private let funds: Observable<FundsType> = Observable<FundsType>(value: nil)
+  let funds: Observable<FundsType> = Observable<FundsType>(value: nil)
   private var viewIsReady = false {
     didSet {
       if viewIsReady {
@@ -45,6 +47,10 @@ class FundsViewModelImpl: FundsViewModel {
   func getFunds(with handler: @escaping (FundsType?, Error?) -> Void) {
     fundsPollingService.onValueUpdate = handler
     fundsPollingService.startPollingWith(parameter: settingsService.getDefaultRequestParameters().currencyCode)
+  }
+
+  func updateCurrencyCode(_ currencyCode: String) {
+    fundsPollingService.updateRequstParameter(with: currencyCode)
   }
 
   func addFundsObserver(for observer: AnyObject, with handler: @escaping (FundsType?) -> Void) {

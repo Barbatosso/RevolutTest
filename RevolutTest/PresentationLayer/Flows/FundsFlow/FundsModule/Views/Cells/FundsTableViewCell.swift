@@ -40,8 +40,23 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     textField.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
     textField.textColor = .black
     textField.textAlignment = .left
+    textField.isEnabled = false
     return textField
   }()
+
+  override func becomeFirstResponder() -> Bool {
+    super.becomeFirstResponder()
+
+    fundsTextField.isEnabled = true
+    return fundsTextField.becomeFirstResponder()
+  }
+
+  override func resignFirstResponder() -> Bool {
+    super.resignFirstResponder()
+
+    fundsTextField.isEnabled = false
+    return fundsTextField.resignFirstResponder()
+  }
 
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -79,25 +94,24 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     fatalError("init(coder:) has not been implemented")
   }
 
-  func configureInitialState(with fundCode: String, fundTitle: String, amount: Double) {
-    flagImageView.image = UIImage(named: fundCode)
-    fundCodeLabel.text = fundCode
-    fundTitleLabel.text = fundTitle
-    fundsTextField.text = String(amount)
-    fundsTextField.isEnabled = false
-  }
-
-  func configureForEditing() {
-    fundsTextField.isEnabled = true
-  }
-
-  func setNewFund(value: Double) {
-    fundsTextField.text = String(value)
+  func setNewFund(_ value: Double) {
+    fundsTextField.text = string(for: value)
   }
 
   func configure(with data: FundsItem) {
     flagImageView.image = UIImage(named: data.fundsCode)
     fundTitleLabel.text = data.fundsCode
-    fundsTextField.text = String(data.value)
+    fundsTextField.text = string(for: data.value)
+  }
+
+  private func string(for value: Double) -> String {
+    return String(format: "%.3f", value)
+  }
+
+  override func prepareForReuse() {
+    super.prepareForReuse()
+
+    fundsTextField.text = nil
+    fundTitleLabel.text = nil
   }
 }

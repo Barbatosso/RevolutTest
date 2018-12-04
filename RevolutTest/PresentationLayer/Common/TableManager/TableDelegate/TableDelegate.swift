@@ -26,14 +26,25 @@ class TableDelegateImpl: NSObject, TableDelegate, UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard let rows = tableManager?.rows else { return }
+    guard var rows = tableManager?.rows else { return }
+
+    let indexPathForFirstItem = IndexPath(row: 0, section: indexPath.section)
+    let firstCell = tableView.cellForRow(at: indexPathForFirstItem)
+    firstCell?.resignFirstResponder()
 
     if rows[indexPath.row].onTap() {
       tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    let cell = tableView.cellForRow(at: indexPath)
+    cell?.becomeFirstResponder()
+
     tableView.beginUpdates()
-    tableView.moveRow(at: indexPath, to: IndexPath(row: 0, section: indexPath.section))
+    tableView.moveRow(at: indexPath, to: indexPathForFirstItem)
     tableView.endUpdates()
+
+    let row = rows.remove(at: indexPath.row)
+    rows.insert(row, at: 0)
+    tableManager?.rows = rows
   }
 }
