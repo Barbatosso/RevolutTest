@@ -12,7 +12,7 @@
 		231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C42217FA56D00DA62DB /* FundsView.swift */; };
 		231B3C47217FA9E200DA62DB /* ViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C46217FA9E200DA62DB /* ViewHolder.swift */; };
 		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
-		233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedTextField.swift */; };
+		233A9A0E21712434000A5F88 /* UnderlinedObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */; };
 		233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
 		233A9A132171DCAA000A5F88 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		233A9A182171DCC9000A5F88 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233A9A152171DCB9000A5F88 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -50,6 +50,7 @@
 		239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */; };
 		239CBF6221AF341E007EA761 /* PollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF6121AF341E007EA761 /* PollingService.swift */; };
 		23B1588E21B657260057EF4F /* FundsTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1588D21B657260057EF4F /* FundsTableRow.swift */; };
+		23B1589421B7A0F00057EF4F /* ObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1589321B7A0F00057EF4F /* ObservableTextField.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
 		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
 		23E6B1D221B0878500964B1D /* RevolutTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* RevolutTestTests.swift */; };
@@ -95,7 +96,7 @@
 		231B3C42217FA56D00DA62DB /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
 		231B3C46217FA9E200DA62DB /* ViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHolder.swift; sourceTree = "<group>"; };
 		233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableViewCell.swift; sourceTree = "<group>"; };
-		233A9A0D21712434000A5F88 /* UnderlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextField.swift; sourceTree = "<group>"; };
+		233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedObservableTextField.swift; sourceTree = "<group>"; };
 		233A9A152171DCB9000A5F88 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		2362A4C52167B720000C8046 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		2362A4CF2167F538000C8046 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSettingsService.swift; sourceTree = "<group>"; };
 		239CBF6121AF341E007EA761 /* PollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingService.swift; sourceTree = "<group>"; };
 		23B1588D21B657260057EF4F /* FundsTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableRow.swift; sourceTree = "<group>"; };
+		23B1589321B7A0F00057EF4F /* ObservableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTextField.swift; sourceTree = "<group>"; };
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		23BFB28D217E5DD100A948B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		23E6B1CF21B0878500964B1D /* RevolutTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevolutTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				231B3C38217FA13C00DA62DB /* RoundImageView.swift */,
+				233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */,
+				23B1589321B7A0F00057EF4F /* ObservableTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */,
-				233A9A0D21712434000A5F88 /* UnderlinedTextField.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -777,13 +780,14 @@
 				23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */,
 				23FF286C21B409FD002C06AE /* TableManager.swift in Sources */,
 				237DB91B21B43B52007E54F3 /* FundsViewModel.swift in Sources */,
+				23B1589421B7A0F00057EF4F /* ObservableTextField.swift in Sources */,
 				231B3C47217FA9E200DA62DB /* ViewHolder.swift in Sources */,
 				237DB92321B47AC0007E54F3 /* FundsModuleFabric.swift in Sources */,
 				231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */,
 				2362A4DC2168069D000C8046 /* NavigationRouter.swift in Sources */,
 				237DB92121B43EEA007E54F3 /* FundsItem.swift in Sources */,
 				23FF286621B2F28F002C06AE /* TableDelegate.swift in Sources */,
-				233A9A0E21712434000A5F88 /* UnderlinedTextField.swift in Sources */,
+				233A9A0E21712434000A5F88 /* UnderlinedObservableTextField.swift in Sources */,
 				2362A4E321689DD3000C8046 /* ApiTarget.swift in Sources */,
 				2362A51E216A60CB000C8046 /* Funds.swift in Sources */,
 				23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */,

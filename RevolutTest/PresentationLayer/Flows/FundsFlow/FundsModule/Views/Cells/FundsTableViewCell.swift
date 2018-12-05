@@ -36,7 +36,7 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
   }()
 
   let fundsTextField: UITextField = {
-    let textField = UnderlinedTextField()
+    let textField = UnderlinedObservableTextField()
     textField.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
     textField.textColor = .black
     textField.textAlignment = .right

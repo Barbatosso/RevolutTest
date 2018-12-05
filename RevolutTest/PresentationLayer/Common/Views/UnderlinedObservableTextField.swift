@@ -1,5 +1,5 @@
 //
-//  UnderlinedTextField.swift
+//  UnderlinedObservableTextField.swift
 //  RevolutTest
 //
 //  Created by Egor Petrov on 12/10/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UnderlinedTextField: UITextField {
+class UnderlinedObservableTextField: ObservableTextField {
 
   private let lineView: UIView = {
     let view = UIView()
@@ -17,8 +17,8 @@ class UnderlinedTextField: UITextField {
     return view
   }()
 
-  override init(frame: CGRect) {
-    super.init(frame: frame)
+  override init() {
+    super.init()
 
     addSubview(lineView)
   }
