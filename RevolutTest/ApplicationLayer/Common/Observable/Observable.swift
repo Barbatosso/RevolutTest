@@ -48,4 +48,9 @@ class Observable<T> {
   private func removeObserver(_ observer: AnyObject) {
     observers.removeAll { $0.onwer === observer }
   }
+
+  class func zip(_ observable1: Observable<T>, _ observable2: Observable<T>) -> Observable<(T?, T?)> {
+    let observableValues = (observable1.value, observable2.value)
+    return Observable<(T?, T?)>(value: observableValues)
+  }
 }
