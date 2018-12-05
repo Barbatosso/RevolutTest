@@ -11,7 +11,7 @@ import Foundation
 protocol RequestSettingsService {
 
   func registerDefaultRequestParameters()
-  func updateDefaultRequestParameters(with parameter: StandartFundsRequestParameters)
+  func updateDefaultRequestParameters(currencyCode: String, value: Double)
   func getDefaultRequestParameters() -> StandartFundsRequestParameters
 }
 
@@ -29,7 +29,7 @@ class RequestSettingsServiceImpl: RequestSettingsService {
 
     enum Values {
 
-      static let standartValue = StandartFundsRequestParameters(currencyCode: "EUR", value: 1)
+      static let standartValue = StandartFundsRequestParameters(currencyCode: "EUR", value: 1.0)
     }
   }
 
@@ -41,12 +41,14 @@ class RequestSettingsServiceImpl: RequestSettingsService {
     guard userDefaults.value(forKey: Constants.Keys.standartCodeKey) as? String == nil,
     userDefaults.value(forKey: Constants.Keys.standartValueKey) as? Double == nil
       else { return }
-    updateDefaultRequestParameters(with: Constants.Values.standartValue)
+    updateDefaultRequestParameters(
+      currencyCode: Constants.Values.standartValue.currencyCode,
+      value: Constants.Values.standartValue.value)
   }
 
-  func updateDefaultRequestParameters(with parameter: StandartFundsRequestParameters) {
-    userDefaults.set(parameter.currencyCode, forKey: Constants.Keys.standartCodeKey)
-    userDefaults.set(parameter.value, forKey: Constants.Keys.standartValueKey)
+  func updateDefaultRequestParameters(currencyCode: String, value: Double) {
+    userDefaults.set(currencyCode, forKey: Constants.Keys.standartCodeKey)
+    userDefaults.set(value, forKey: Constants.Keys.standartValueKey)
   }
 
   func getDefaultRequestParameters() -> StandartFundsRequestParameters {
@@ -54,7 +56,9 @@ class RequestSettingsServiceImpl: RequestSettingsService {
     let value = userDefaults.value(forKey: Constants.Keys.standartValueKey) as? Double
       else {
         log.error("Cannot get value for request, return Constant value: \(Constants.Values.standartValue)")
-        updateDefaultRequestParameters(with: Constants.Values.standartValue)
+        updateDefaultRequestParameters(
+          currencyCode: Constants.Values.standartValue.currencyCode,
+          value: Constants.Values.standartValue.value)
         return Constants.Values.standartValue
     }
     let parameter = StandartFundsRequestParameters(currencyCode: code, value: value)
