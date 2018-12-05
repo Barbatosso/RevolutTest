@@ -54,7 +54,6 @@ class FundsViewController: UIViewController, FundsModule, ViewHolder {
     var rows = funds.rates.map { [unowned self] item -> FundsTableRow in
       let rowItem = FundsItem(fundsCode: item.key, value: item.value)
       let row = FundsTableRow(data: rowItem, observable: self.viewModel.funds)
-//      row.configureObserving(self.viewModel.funds)
       row.onTap = {
         self.viewModel.updateCurrencyCode(item.key)
         return true
@@ -63,7 +62,6 @@ class FundsViewController: UIViewController, FundsModule, ViewHolder {
     }
     let rowItem = viewModel.standartRowData
     let row = FundsTableRow(data: rowItem, observable: self.viewModel.funds)
-//    row.configureObserving(viewModel.funds)
     rows.insert(row, at: 0)
     tableManager.append(newRows: rows)
     tableManager.reload()

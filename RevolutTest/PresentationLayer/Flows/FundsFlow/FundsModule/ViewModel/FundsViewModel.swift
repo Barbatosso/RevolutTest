@@ -23,6 +23,7 @@ protocol FundsViewModel: class {
 class FundsViewModelImpl: FundsViewModel {
 
   let funds: Observable<FundsType> = Observable<FundsType>(value: nil)
+
   private var viewIsReady = false {
     didSet {
       if viewIsReady {

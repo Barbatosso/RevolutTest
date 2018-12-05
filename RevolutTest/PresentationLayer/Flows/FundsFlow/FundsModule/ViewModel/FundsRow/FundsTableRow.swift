@@ -33,14 +33,4 @@ class FundsTableRow: TableRow<FundsTableViewCell> {
       cell.setNewFund(value)
     }
   }
-
-//  func configureObserving(_ observable: Observable<FundsType>) {
-//    observable.observe(self) { [weak self] funds in
-//      guard let self = self,
-//        let funds = funds,
-//        let value = funds.rates[self.key]
-//        else { return }
-//      self.tableViewCell?.setNewFund(value)
-//    }
-//  }
 }
