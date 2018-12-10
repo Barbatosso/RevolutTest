@@ -32,12 +32,12 @@ class FundsViewModelImpl: FundsViewModel {
   private var viewIsReady = false {
     didSet {
       if viewIsReady {
-        setupPollSevicehandler()
+        setupPollServiceHandler()
       }
     }
   }
 
-  var settingsService: RequestSettingsService
+  var settingsService: RequestParamatersStorage
   var fundsPollingService: FundsPollingService
 
   var standartRowData: FundsItem {
@@ -45,7 +45,7 @@ class FundsViewModelImpl: FundsViewModel {
     return FundsItem.init(fundsCode: parameters.currencyCode, value: parameters.value)
   }
 
-  init(settingsService: RequestSettingsService, fundsPollingService: FundsPollingService) {
+  init(settingsService: RequestParamatersStorage, fundsPollingService: FundsPollingService) {
     self.settingsService = settingsService
     self.fundsPollingService = fundsPollingService
   }
@@ -57,6 +57,7 @@ class FundsViewModelImpl: FundsViewModel {
 
   func updateCurrencyCode(_ currencyCode: String) {
     fundsPollingService.updateRequstParameter(with: currencyCode)
+    settingsService.updateDefaultRequestParameters(currencyCode: currencyCode)
   }
 
   func addFundsObserver(for observer: AnyObject, with handler: @escaping (FundsType?) -> Void) {
@@ -74,7 +75,7 @@ class FundsViewModelImpl: FundsViewModel {
     viewIsReady = isReady
   }
 
-  private func setupPollSevicehandler() {
+  private func setupPollServiceHandler() {
     fundsPollingService.onValueUpdate = { [weak funds] fundsItem, _ in
       funds?.value?.0 = fundsItem
     }

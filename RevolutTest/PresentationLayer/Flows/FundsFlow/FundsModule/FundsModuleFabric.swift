@@ -11,7 +11,7 @@ import Foundation
 struct FundsModuleFabric {
 
   func assemble() -> FundsModule {
-    let settingsService = RequestSettingsServiceImpl(userDefaults: UserDefaults.standard)
+    let settingsService = RequestParametersStorageImpl(userDefaults: UserDefaults.standard)
     let configService = ConfigService()
     let mapper = JsonObjectMapper()
     let apiService = ApiService(configService: configService, mapper: mapper)

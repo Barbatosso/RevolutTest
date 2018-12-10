@@ -1,5 +1,5 @@
 //
-//  RequestSettingsService.swift
+//  RequestParamatersStorage.swift
 //  RevolutTest
 //
 //  Created by Egor Petrov on 28/11/2018.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol RequestSettingsService {
+protocol RequestParamatersStorage {
 
   func registerDefaultRequestParameters()
-  func updateDefaultRequestParameters(currencyCode: String, value: Double)
+  func updateDefaultRequestParameters(currencyCode: String)
   func getDefaultRequestParameters() -> StandartFundsRequestParameters
 }
 
-class RequestSettingsServiceImpl: RequestSettingsService {
+class RequestParametersStorageImpl: RequestParamatersStorage {
 
   private let userDefaults: UserDefaults
 
@@ -29,7 +29,8 @@ class RequestSettingsServiceImpl: RequestSettingsService {
 
     enum Values {
 
-      static let standartValue = StandartFundsRequestParameters(currencyCode: "EUR", value: 1.0)
+      static let standardCurrency = "EUR"
+      static let standardValue = 1.0
     }
   }
 
@@ -41,25 +42,25 @@ class RequestSettingsServiceImpl: RequestSettingsService {
     guard userDefaults.value(forKey: Constants.Keys.standartCodeKey) as? String == nil,
     userDefaults.value(forKey: Constants.Keys.standartValueKey) as? Double == nil
       else { return }
-    updateDefaultRequestParameters(
-      currencyCode: Constants.Values.standartValue.currencyCode,
-      value: Constants.Values.standartValue.value)
+    updateDefaultRequestParameters(currencyCode: Constants.Values.standardCurrency)
   }
 
-  func updateDefaultRequestParameters(currencyCode: String, value: Double) {
+  func updateDefaultRequestParameters(currencyCode: String) {
     userDefaults.set(currencyCode, forKey: Constants.Keys.standartCodeKey)
-    userDefaults.set(value, forKey: Constants.Keys.standartValueKey)
+    userDefaults.set(Constants.Values.standardValue, forKey: Constants.Keys.standartValueKey)
   }
 
   func getDefaultRequestParameters() -> StandartFundsRequestParameters {
     guard let code = userDefaults.value(forKey: Constants.Keys.standartCodeKey) as? String,
     let value = userDefaults.value(forKey: Constants.Keys.standartValueKey) as? Double
       else {
-        log.error("Cannot get value for request, return Constant value: \(Constants.Values.standartValue)")
-        updateDefaultRequestParameters(
-          currencyCode: Constants.Values.standartValue.currencyCode,
-          value: Constants.Values.standartValue.value)
-        return Constants.Values.standartValue
+        let standardParameters = StandartFundsRequestParameters(
+          currencyCode: Constants.Values.standardCurrency,
+          value: Constants.Values.standardValue
+        )
+        log.error("Cannot get value for request, return Constant value: \(standardParameters)")
+        updateDefaultRequestParameters(currencyCode: Constants.Values.standardCurrency)
+        return standardParameters
     }
     let parameter = StandartFundsRequestParameters(currencyCode: code, value: value)
     return parameter
