@@ -58,6 +58,7 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
 
     fundsTextField.isEnabled = false
     fundsTextField.resignFirstResponder()
+    fundsTextField.observableText.cleanAllObservers()
     return true
   }
 

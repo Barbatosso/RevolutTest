@@ -13,7 +13,7 @@ protocol TableDataSource: class {
   init(tableManager: TableManager)
 }
 
-class TableDataSourceImpl: NSObject, TableDataSource, UITableViewDataSource {
+class BaseTableDataSource: NSObject, TableDataSource, UITableViewDataSource {
 
   private weak var tableManager: TableManager?
 

@@ -41,7 +41,7 @@ class FundsViewController: UIViewController, FundsModule, ViewHolder {
   }
 
   private func setupTableManager() {
-    tableManager.connect(to: rootView.tableView, with: TableDataSourceImpl.self, tableDelegate: TableDelegateImpl.self)
+    tableManager.connect(to: rootView.tableView, with: BaseTableDataSource.self, tableDelegate: FundsTableDelegate.self)
   }
 
   private func bind(_ funds: FundsType) {

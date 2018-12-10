@@ -47,6 +47,7 @@
 		237DB91E21B43D57007E54F3 /* FundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB91D21B43D57007E54F3 /* FundsViewController.swift */; };
 		237DB92121B43EEA007E54F3 /* FundsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB92021B43EEA007E54F3 /* FundsItem.swift */; };
 		237DB92321B47AC0007E54F3 /* FundsModuleFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB92221B47AC0007E54F3 /* FundsModuleFabric.swift */; };
+		2385C5AC21BE9EF8007C82B3 /* FundsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385C5AB21BE9EF8007C82B3 /* FundsTableDelegate.swift */; };
 		239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */; };
 		239CBF6221AF341E007EA761 /* PollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF6121AF341E007EA761 /* PollingService.swift */; };
 		23B1588E21B657260057EF4F /* FundsTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1588D21B657260057EF4F /* FundsTableRow.swift */; };
@@ -132,6 +133,7 @@
 		237DB91D21B43D57007E54F3 /* FundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewController.swift; sourceTree = "<group>"; };
 		237DB92021B43EEA007E54F3 /* FundsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsItem.swift; sourceTree = "<group>"; };
 		237DB92221B47AC0007E54F3 /* FundsModuleFabric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsModuleFabric.swift; sourceTree = "<group>"; };
+		2385C5AB21BE9EF8007C82B3 /* FundsTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableDelegate.swift; sourceTree = "<group>"; };
 		239CBF5E21AF2D00007EA761 /* RequestSettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSettingsService.swift; sourceTree = "<group>"; };
 		239CBF6121AF341E007EA761 /* PollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingService.swift; sourceTree = "<group>"; };
 		23B1588D21B657260057EF4F /* FundsTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableRow.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 		237DB91921B43B47007E54F3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2385C5AA21BE9EE9007C82B3 /* Delegate */,
 				237DB91F21B43ED4007E54F3 /* FundsRow */,
 				237DB91A21B43B52007E54F3 /* FundsViewModel.swift */,
 			);
@@ -537,6 +540,14 @@
 				23B1588D21B657260057EF4F /* FundsTableRow.swift */,
 			);
 			path = FundsRow;
+			sourceTree = "<group>";
+		};
+		2385C5AA21BE9EE9007C82B3 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2385C5AB21BE9EF8007C82B3 /* FundsTableDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		239CBF5D21AF2CE4007EA761 /* RequestSettingsService */ = {
@@ -802,6 +813,7 @@
 				2362A4E521689E75000C8046 /* HTTPMethod.swift in Sources */,
 				239CBF5F21AF2D00007EA761 /* RequestSettingsService.swift in Sources */,
 				2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */,
+				2385C5AC21BE9EF8007C82B3 /* FundsTableDelegate.swift in Sources */,
 				2362A523216A639B000C8046 /* FundsServiceTarget.swift in Sources */,
 				233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */,
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
