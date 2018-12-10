@@ -64,6 +64,7 @@
 		23239F5F21BECE38005387AF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233A9A152171DCB9000A5F88 /* SnapKit.framework */; };
 		23239F6021BECE38005387AF /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
 		23239F6121BECE52005387AF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4F4216A339A000C8046 /* Log.swift */; };
+		23239F6921BED46D005387AF /* TestConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F6821BED46D005387AF /* TestConfigService.swift */; };
 		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
 		233A9A0E21712434000A5F88 /* UnderlinedObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */; };
 		233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
@@ -106,7 +107,7 @@
 		23B1589421B7A0F00057EF4F /* ObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1589321B7A0F00057EF4F /* ObservableTextField.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
 		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
-		23E6B1D221B0878500964B1D /* RevolutTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* RevolutTestTests.swift */; };
+		23E6B1D221B0878500964B1D /* TestApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* TestApiTarget.swift */; };
 		23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */; };
 		23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */; };
 		23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */; };
@@ -148,6 +149,7 @@
 		231B3C3E217FA44B00DA62DB /* FundsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsModule.swift; sourceTree = "<group>"; };
 		231B3C42217FA56D00DA62DB /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
 		231B3C46217FA9E200DA62DB /* ViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHolder.swift; sourceTree = "<group>"; };
+		23239F6821BED46D005387AF /* TestConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfigService.swift; sourceTree = "<group>"; };
 		233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableViewCell.swift; sourceTree = "<group>"; };
 		233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedObservableTextField.swift; sourceTree = "<group>"; };
 		233A9A152171DCB9000A5F88 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
@@ -193,7 +195,7 @@
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		23BFB28D217E5DD100A948B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		23E6B1CF21B0878500964B1D /* RevolutTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevolutTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23E6B1D121B0878500964B1D /* RevolutTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevolutTestTests.swift; sourceTree = "<group>"; };
+		23E6B1D121B0878500964B1D /* TestApiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiTarget.swift; sourceTree = "<group>"; };
 		23E6B1D321B0878500964B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsPollingService.swift; sourceTree = "<group>"; };
 		23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartFundsRequestParameters.swift; sourceTree = "<group>"; };
@@ -287,6 +289,22 @@
 				2362A522216A639B000C8046 /* FundsServiceTarget.swift */,
 			);
 			path = FundsService;
+			sourceTree = "<group>";
+		};
+		23239F6221BECF0D005387AF /* TestApiTarget */ = {
+			isa = PBXGroup;
+			children = (
+				23E6B1D121B0878500964B1D /* TestApiTarget.swift */,
+			);
+			path = TestApiTarget;
+			sourceTree = "<group>";
+		};
+		23239F6521BED3F8005387AF /* TestConfigService */ = {
+			isa = PBXGroup;
+			children = (
+				23239F6821BED46D005387AF /* TestConfigService.swift */,
+			);
+			path = TestConfigService;
 			sourceTree = "<group>";
 		};
 		233A99F2216FDDA4000A5F88 /* FundsModule */ = {
@@ -634,7 +652,8 @@
 		23E6B1D021B0878500964B1D /* RevolutTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				23E6B1D121B0878500964B1D /* RevolutTestTests.swift */,
+				23239F6521BED3F8005387AF /* TestConfigService */,
+				23239F6221BECF0D005387AF /* TestApiTarget */,
 				23E6B1D321B0878500964B1D /* Info.plist */,
 			);
 			path = RevolutTestTests;
@@ -900,6 +919,7 @@
 				23239F5621BECD0E005387AF /* Coordinator.swift in Sources */,
 				23239F5B21BECD1F005387AF /* NavigationRouter.swift in Sources */,
 				23239F4B21BECCE2005387AF /* URLRequest+Encoding.swift in Sources */,
+				23239F6921BED46D005387AF /* TestConfigService.swift in Sources */,
 				23239F5521BECD08005387AF /* ConfigService.swift in Sources */,
 				23239F4521BECCCE005387AF /* Funds.swift in Sources */,
 				23239F4C21BECCE5005387AF /* Mapper.swift in Sources */,
@@ -919,7 +939,7 @@
 				23239F5121BECCF7005387AF /* PollingService.swift in Sources */,
 				23239F5221BECCFB005387AF /* RequestParamatersStorage.swift in Sources */,
 				23239F3621BECC87005387AF /* UnderlinedObservableTextField.swift in Sources */,
-				23E6B1D221B0878500964B1D /* RevolutTestTests.swift in Sources */,
+				23E6B1D221B0878500964B1D /* TestApiTarget.swift in Sources */,
 				23239F5321BECCFE005387AF /* StandartFundsRequestParameters.swift in Sources */,
 				23239F3C21BECCA9005387AF /* FundsViewModel.swift in Sources */,
 				23239F3521BECC85005387AF /* RoundImageView.swift in Sources */,
@@ -1143,7 +1163,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RevolutTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1168,7 +1188,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = RevolutTestTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
