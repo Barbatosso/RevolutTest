@@ -35,7 +35,7 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     return label
   }()
 
-  let fundsTextField: UITextField = {
+  let fundsTextField: UnderlinedObservableTextField = {
     let textField = UnderlinedObservableTextField()
     textField.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
     textField.textColor = .black
@@ -105,6 +105,10 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     flagImageView.image = UIImage(named: data.fundsCode)
     fundTitleLabel.text = data.fundsCode
     fundsTextField.text = string(for: data.value)
+  }
+
+  func observableText() -> Observable<String> {
+    return fundsTextField.observableText
   }
 
   private func string(for value: Double) -> String {

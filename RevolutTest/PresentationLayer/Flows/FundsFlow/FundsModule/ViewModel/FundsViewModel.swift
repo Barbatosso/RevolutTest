@@ -8,9 +8,12 @@
 
 import Foundation
 
+typealias Currencies = (funds: FundsType?, value: Double?)
+
 protocol FundsViewModel: class {
 
-  var funds: Observable<FundsType> { get }
+  var funds: Observable<Currencies> { get }
+
   var standartRowData: FundsItem { get }
   func getFunds(with handler: @escaping (FundsType?, Error?) -> Void)
   func updateCurrencyCode(_ currencyCode: String)
@@ -18,11 +21,13 @@ protocol FundsViewModel: class {
   func addFundsObserver(for observer: AnyObject, with handler: @escaping (FundsType?) -> Void)
 
   func viewIsReady(_ isReady: Bool)
+
+  func observeRatio(_ string: String?)
 }
 
 class FundsViewModelImpl: FundsViewModel {
 
-  let funds: Observable<FundsType> = Observable<FundsType>(value: nil)
+  var funds: Observable<Currencies> = Observable<Currencies>(value: Currencies(funds: nil, value: nil))
 
   private var viewIsReady = false {
     didSet {
@@ -55,7 +60,14 @@ class FundsViewModelImpl: FundsViewModel {
   }
 
   func addFundsObserver(for observer: AnyObject, with handler: @escaping (FundsType?) -> Void) {
-    funds.observe(observer, handler: handler)
+    funds.observe(observer) { value in
+      handler(value?.funds)
+    }
+  }
+
+  func observeRatio(_ string: String?) {
+    guard let text = string, !text.isEmpty, let value = Double(text) else { return }
+    funds.value?.value = value
   }
 
   func viewIsReady(_ isReady: Bool) {
@@ -64,7 +76,7 @@ class FundsViewModelImpl: FundsViewModel {
 
   private func setupPollSevicehandler() {
     fundsPollingService.onValueUpdate = { [weak funds] fundsItem, _ in
-      funds?.value = fundsItem
+      funds?.value?.0 = fundsItem
     }
   }
 }

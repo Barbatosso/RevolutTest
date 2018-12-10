@@ -10,9 +10,7 @@ import UIKit
 
 class ObservableTextField: UITextField {
 
-  typealias ObserverHandler = (String?) -> Void
-
-  private let observableText: Observable<String>
+  let observableText: Observable<String>
 
   override var text: String? {
     didSet {
@@ -27,13 +25,5 @@ class ObservableTextField: UITextField {
 
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
-  }
-
-  func addUniqueObserver(_ observer: AnyObject, with handler: @escaping ObserverHandler) {
-    observableText.observeWithUniqueObserver(observer, handler: handler)
-  }
-
-  func addObserver(_ observer: AnyObject, with handler: @escaping ObserverHandler) {
-    observableText.observe(observer, handler: handler)
   }
 }

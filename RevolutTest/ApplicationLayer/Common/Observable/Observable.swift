@@ -20,7 +20,7 @@ class Observable<T> {
     }
   }
 
-  private lazy var observers = [Observer<T>]()
+  lazy var observers = [Observer<T>]()
 
   init(value: T?) {
     self.value = value
@@ -30,6 +30,10 @@ class Observable<T> {
     cleanDeadObservers()
     removeObserver(observer)
     observers.append(Observer(owner: observer, handler: handler))
+  }
+
+  func setObservers(from observable: Observable<T>) {
+    observers = observable.observers
   }
 
   func observeWithUniqueObserver(_ observer: AnyObject, handler: @escaping Handler) {
@@ -47,10 +51,5 @@ class Observable<T> {
 
   private func removeObserver(_ observer: AnyObject) {
     observers.removeAll { $0.onwer === observer }
-  }
-
-  class func zip(_ observable1: Observable<T>, _ observable2: Observable<T>) -> Observable<(T?, T?)> {
-    let observableValues = (observable1.value, observable2.value)
-    return Observable<(T?, T?)>(value: observableValues)
   }
 }

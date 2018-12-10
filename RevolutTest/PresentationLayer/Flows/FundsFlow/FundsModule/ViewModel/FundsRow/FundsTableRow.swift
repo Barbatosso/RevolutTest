@@ -10,12 +10,13 @@ import UIKit
 
 class FundsTableRow: TableRow<FundsTableViewCell> {
 
-  private let observable: Observable<FundsType>
+  private let funds: Observable<Currencies>
+  var observableText: Observable<String>?
   private let key: String
 
-  init(data: FundsItem, observable: Observable<FundsType>) {
+  init(data: FundsItem, funds: Observable<Currencies>) {
     self.key = data.fundsCode
-    self.observable = observable
+    self.funds = funds
 
     super.init(data: data)
   }
@@ -25,12 +26,20 @@ class FundsTableRow: TableRow<FundsTableViewCell> {
 
     guard let cell = cell as? FundsTableViewCell else { return }
 
-    observable.observe(cell) { [weak self] funds in
+    funds.observe(cell) { [weak self] item in
       guard let self = self,
-        let funds = funds,
-        let value = funds.rates[self.key]
-        else { return }
-      cell.setNewFund(value)
+            let value = item?.funds,
+            let rate =  value.rates[self.key]
+      else { return }
+      var currencyValue: Double
+      if let ratio = item?.value {
+        currencyValue = rate * ratio
+      } else {
+        currencyValue = rate
+      }
+      cell.setNewFund(currencyValue)
     }
+
+    observableText = cell.observableText()
   }
 }
