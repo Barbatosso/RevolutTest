@@ -11,13 +11,65 @@
 		231B3C3F217FA44B00DA62DB /* FundsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C3E217FA44B00DA62DB /* FundsModule.swift */; };
 		231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C42217FA56D00DA62DB /* FundsView.swift */; };
 		231B3C47217FA9E200DA62DB /* ViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C46217FA9E200DA62DB /* ViewHolder.swift */; };
+		23239F2D21BECC60005387AF /* TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF286521B2F28F002C06AE /* TableDelegate.swift */; };
+		23239F2E21BECC64005387AF /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF286221B2F26C002C06AE /* TableDataSource.swift */; };
+		23239F2F21BECC67005387AF /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285D21B2ED58002C06AE /* Row.swift */; };
+		23239F3021BECC6A005387AF /* TableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285F21B2F0A1002C06AE /* TableRow.swift */; };
+		23239F3121BECC73005387AF /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */; };
+		23239F3221BECC78005387AF /* TableViewCellRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF286921B408F6002C06AE /* TableViewCellRegistrar.swift */; };
+		23239F3321BECC7B005387AF /* TableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF286B21B409FD002C06AE /* TableManager.swift */; };
+		23239F3421BECC80005387AF /* ViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C46217FA9E200DA62DB /* ViewHolder.swift */; };
+		23239F3521BECC85005387AF /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C38217FA13C00DA62DB /* RoundImageView.swift */; };
+		23239F3621BECC87005387AF /* UnderlinedObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */; };
+		23239F3721BECC8B005387AF /* ObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1589321B7A0F00057EF4F /* ObservableTextField.swift */; };
+		23239F3821BECC9B005387AF /* FundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB91D21B43D57007E54F3 /* FundsViewController.swift */; };
+		23239F3921BECC9E005387AF /* FundsTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2385C5AB21BE9EF8007C82B3 /* FundsTableDelegate.swift */; };
+		23239F3A21BECCA1005387AF /* FundsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB92021B43EEA007E54F3 /* FundsItem.swift */; };
+		23239F3B21BECCA6005387AF /* FundsTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1588D21B657260057EF4F /* FundsTableRow.swift */; };
+		23239F3C21BECCA9005387AF /* FundsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB91A21B43B52007E54F3 /* FundsViewModel.swift */; };
+		23239F3D21BECCAC005387AF /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
+		23239F3E21BECCB0005387AF /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C42217FA56D00DA62DB /* FundsView.swift */; };
+		23239F3F21BECCB3005387AF /* FundsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C3E217FA44B00DA62DB /* FundsModule.swift */; };
+		23239F4021BECCB6005387AF /* FundsModuleFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237DB92221B47AC0007E54F3 /* FundsModuleFabric.swift */; };
+		23239F4121BECCB9005387AF /* FundsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23674225216D307E006D57B8 /* FundsCoordinator.swift */; };
+		23239F4221BECCC2005387AF /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
+		23239F4321BECCC7005387AF /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
+		23239F4421BECCCA005387AF /* FundsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A51B216A5FB7000C8046 /* FundsType.swift */; };
+		23239F4521BECCCE005387AF /* Funds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A51D216A60CB000C8046 /* Funds.swift */; };
+		23239F4621BECCD2005387AF /* FundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */; };
+		23239F4721BECCD5005387AF /* FundsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A520216A6297000C8046 /* FundsService.swift */; };
+		23239F4821BECCD9005387AF /* FundsServiceTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A522216A639B000C8046 /* FundsServiceTarget.swift */; };
+		23239F4921BECCDC005387AF /* ApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4E221689DD3000C8046 /* ApiTarget.swift */; };
+		23239F4A21BECCDF005387AF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4E421689E75000C8046 /* HTTPMethod.swift */; };
+		23239F4B21BECCE2005387AF /* URLRequest+Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A514216A462D000C8046 /* URLRequest+Encoding.swift */; };
+		23239F4C21BECCE5005387AF /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4EA216A0E00000C8046 /* Mapper.swift */; };
+		23239F4D21BECCE9005387AF /* JsonObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4FD216A35DC000C8046 /* JsonObjectMapper.swift */; };
+		23239F4E21BECCEC005387AF /* ApiRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4F0216A3171000C8046 /* ApiRequester.swift */; };
+		23239F4F21BECCEF005387AF /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A500216A3916000C8046 /* ApiService.swift */; };
+		23239F5021BECCF3005387AF /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4F7216A33D5000C8046 /* ApiError.swift */; };
+		23239F5121BECCF7005387AF /* PollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF6121AF341E007EA761 /* PollingService.swift */; };
+		23239F5221BECCFB005387AF /* RequestParamatersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239CBF5E21AF2D00007EA761 /* RequestParamatersStorage.swift */; };
+		23239F5321BECCFE005387AF /* StandartFundsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */; };
+		23239F5421BECD04005387AF /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A508216A3E76000C8046 /* Configurator.swift */; };
+		23239F5521BECD08005387AF /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A50A216A3F09000C8046 /* ConfigService.swift */; };
+		23239F5621BECD0E005387AF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D42167FACB000C8046 /* Coordinator.swift */; };
+		23239F5721BECD14005387AF /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D72167FB22000C8046 /* BaseCoordinator.swift */; };
+		23239F5821BECD19005387AF /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D22167F8AA000C8046 /* Routable.swift */; };
+		23239F5921BECD19005387AF /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D22167F8AA000C8046 /* Routable.swift */; };
+		23239F5A21BECD1D005387AF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D92167FDE6000C8046 /* AppRouter.swift */; };
+		23239F5B21BECD1F005387AF /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4DB2168069D000C8046 /* NavigationRouter.swift */; };
+		23239F5C21BECD24005387AF /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4CF2167F538000C8046 /* Presentable.swift */; };
+		23239F5D21BECD29005387AF /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4FA216A3499000C8046 /* LocalizedString.swift */; };
+		23239F5E21BECD8E005387AF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233A9A152171DCB9000A5F88 /* SnapKit.framework */; };
+		23239F5F21BECE38005387AF /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233A9A152171DCB9000A5F88 /* SnapKit.framework */; };
+		23239F6021BECE38005387AF /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
+		23239F6121BECE52005387AF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4F4216A339A000C8046 /* Log.swift */; };
 		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
 		233A9A0E21712434000A5F88 /* UnderlinedObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */; };
 		233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
 		233A9A132171DCAA000A5F88 /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		233A9A182171DCC9000A5F88 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233A9A152171DCB9000A5F88 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2362A4D02167F538000C8046 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4CF2167F538000C8046 /* Presentable.swift */; };
-		2362A4D32167F8AA000C8046 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D22167F8AA000C8046 /* Routable.swift */; };
 		2362A4D52167FACB000C8046 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D42167FACB000C8046 /* Coordinator.swift */; };
 		2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D72167FB22000C8046 /* BaseCoordinator.swift */; };
 		2362A4DA2167FDE6000C8046 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D92167FDE6000C8046 /* AppRouter.swift */; };
@@ -159,6 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23239F5E21BECD8E005387AF /* SnapKit.framework in Frameworks */,
 				233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +220,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23239F5F21BECE38005387AF /* SnapKit.framework in Frameworks */,
+				23239F6021BECE38005387AF /* SwiftyBeaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,12 +882,12 @@
 				237DB91E21B43D57007E54F3 /* FundsViewController.swift in Sources */,
 				23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */,
 				23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */,
-				2362A4D32167F8AA000C8046 /* Routable.swift in Sources */,
 				23FF285E21B2ED58002C06AE /* Row.swift in Sources */,
 				23FF286321B2F26C002C06AE /* TableDataSource.swift in Sources */,
 				2362A4FE216A35DC000C8046 /* JsonObjectMapper.swift in Sources */,
 				23B1588E21B657260057EF4F /* FundsTableRow.swift in Sources */,
 				23FF286A21B408F6002C06AE /* TableViewCellRegistrar.swift in Sources */,
+				23239F5821BECD19005387AF /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,7 +895,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23239F3321BECC7B005387AF /* TableManager.swift in Sources */,
+				23239F4321BECCC7005387AF /* Observer.swift in Sources */,
+				23239F5621BECD0E005387AF /* Coordinator.swift in Sources */,
+				23239F5B21BECD1F005387AF /* NavigationRouter.swift in Sources */,
+				23239F4B21BECCE2005387AF /* URLRequest+Encoding.swift in Sources */,
+				23239F5521BECD08005387AF /* ConfigService.swift in Sources */,
+				23239F4521BECCCE005387AF /* Funds.swift in Sources */,
+				23239F4C21BECCE5005387AF /* Mapper.swift in Sources */,
+				23239F3121BECC73005387AF /* ConfigurableCell.swift in Sources */,
+				23239F3921BECC9E005387AF /* FundsTableDelegate.swift in Sources */,
+				23239F3421BECC80005387AF /* ViewHolder.swift in Sources */,
+				23239F3821BECC9B005387AF /* FundsViewController.swift in Sources */,
+				23239F4D21BECCE9005387AF /* JsonObjectMapper.swift in Sources */,
+				23239F2F21BECC67005387AF /* Row.swift in Sources */,
+				23239F5021BECCF3005387AF /* ApiError.swift in Sources */,
+				23239F3D21BECCAC005387AF /* FundsTableViewCell.swift in Sources */,
+				23239F4121BECCB9005387AF /* FundsCoordinator.swift in Sources */,
+				23239F5C21BECD24005387AF /* Presentable.swift in Sources */,
+				23239F4821BECCD9005387AF /* FundsServiceTarget.swift in Sources */,
+				23239F4F21BECCEF005387AF /* ApiService.swift in Sources */,
+				23239F4721BECCD5005387AF /* FundsService.swift in Sources */,
+				23239F5121BECCF7005387AF /* PollingService.swift in Sources */,
+				23239F5221BECCFB005387AF /* RequestParamatersStorage.swift in Sources */,
+				23239F3621BECC87005387AF /* UnderlinedObservableTextField.swift in Sources */,
 				23E6B1D221B0878500964B1D /* RevolutTestTests.swift in Sources */,
+				23239F5321BECCFE005387AF /* StandartFundsRequestParameters.swift in Sources */,
+				23239F3C21BECCA9005387AF /* FundsViewModel.swift in Sources */,
+				23239F3521BECC85005387AF /* RoundImageView.swift in Sources */,
+				23239F4421BECCCA005387AF /* FundsType.swift in Sources */,
+				23239F3021BECC6A005387AF /* TableRow.swift in Sources */,
+				23239F3A21BECCA1005387AF /* FundsItem.swift in Sources */,
+				23239F5D21BECD29005387AF /* LocalizedString.swift in Sources */,
+				23239F6121BECE52005387AF /* Log.swift in Sources */,
+				23239F4E21BECCEC005387AF /* ApiRequester.swift in Sources */,
+				23239F4621BECCD2005387AF /* FundsPollingService.swift in Sources */,
+				23239F5721BECD14005387AF /* BaseCoordinator.swift in Sources */,
+				23239F5A21BECD1D005387AF /* AppRouter.swift in Sources */,
+				23239F5421BECD04005387AF /* Configurator.swift in Sources */,
+				23239F4A21BECCDF005387AF /* HTTPMethod.swift in Sources */,
+				23239F5921BECD19005387AF /* Routable.swift in Sources */,
+				23239F4021BECCB6005387AF /* FundsModuleFabric.swift in Sources */,
+				23239F2E21BECC64005387AF /* TableDataSource.swift in Sources */,
+				23239F3F21BECCB3005387AF /* FundsModule.swift in Sources */,
+				23239F3E21BECCB0005387AF /* FundsView.swift in Sources */,
+				23239F2D21BECC60005387AF /* TableDelegate.swift in Sources */,
+				23239F3721BECC8B005387AF /* ObservableTextField.swift in Sources */,
+				23239F3B21BECCA6005387AF /* FundsTableRow.swift in Sources */,
+				23239F3221BECC78005387AF /* TableViewCellRegistrar.swift in Sources */,
+				23239F4221BECCC2005387AF /* Observable.swift in Sources */,
+				23239F4921BECCDC005387AF /* ApiTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,6 +1138,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MEH36U69XD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RevolutTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1055,6 +1163,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MEH36U69XD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RevolutTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
