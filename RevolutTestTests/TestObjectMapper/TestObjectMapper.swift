@@ -15,12 +15,14 @@ class TestObjectMapper: XCTestCase {
   private var encodedData: Data!
 
   override func setUp() {
+    super.setUp()
     mapper = JsonObjectMapper()
     stubFunds = StubFunds()
     encodedData = try? JSONEncoder().encode(stubFunds)
   }
 
   override func tearDown() {
+    super.tearDown()
     mapper = nil
   }
 

@@ -15,7 +15,12 @@ protocol RequestParamatersStorage {
   func getDefaultRequestParameters() -> StandartFundsRequestParameters
 }
 
-class RequestParametersStorageImpl: RequestParamatersStorage {
+protocol TestableParametersStorage: RequestParamatersStorage {
+
+  func removeAllParameters()
+}
+
+class RequestParametersStorageImpl: TestableParametersStorage {
 
   private let userDefaults: UserDefaults
 
@@ -64,5 +69,10 @@ class RequestParametersStorageImpl: RequestParamatersStorage {
     }
     let parameter = StandartFundsRequestParameters(currencyCode: code, value: value)
     return parameter
+  }
+
+  func removeAllParameters() {
+    userDefaults.removeObject(forKey: Constants.Keys.standartCodeKey)
+    userDefaults.removeObject(forKey: Constants.Keys.standartValueKey)
   }
 }

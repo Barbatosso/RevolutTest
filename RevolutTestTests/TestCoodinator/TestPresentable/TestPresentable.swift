@@ -13,10 +13,12 @@ class TestPresentable: XCTestCase {
   private var presentable: Presentable!
 
   override func setUp() {
+    super.setUp()
     presentable = MockViewController()
   }
 
   override func tearDown() {
+    super.tearDown()
     presentable = nil
   }
 

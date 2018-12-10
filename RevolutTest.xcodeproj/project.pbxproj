@@ -70,6 +70,7 @@
 		23239F7521BEECB1005387AF /* TestPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F7421BEECB1005387AF /* TestPresentable.swift */; };
 		23239F7721BEEDCC005387AF /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F7621BEEDCC005387AF /* MockViewController.swift */; };
 		23239F7A21BEEE5B005387AF /* MockModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F7921BEEE5B005387AF /* MockModule.swift */; };
+		23239F8021BEF6D2005387AF /* TestRequestParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F7F21BEF6D2005387AF /* TestRequestParametersStorage.swift */; };
 		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
 		233A9A0E21712434000A5F88 /* UnderlinedObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */; };
 		233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
@@ -112,7 +113,7 @@
 		23B1589421B7A0F00057EF4F /* ObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1589321B7A0F00057EF4F /* ObservableTextField.swift */; };
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
 		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
-		23E6B1D221B0878500964B1D /* TestApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* TestApiTarget.swift */; };
+		23E6B1D221B0878500964B1D /* TestFundsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* TestFundsTarget.swift */; };
 		23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */; };
 		23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */; };
 		23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */; };
@@ -160,6 +161,7 @@
 		23239F7421BEECB1005387AF /* TestPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPresentable.swift; sourceTree = "<group>"; };
 		23239F7621BEEDCC005387AF /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
 		23239F7921BEEE5B005387AF /* MockModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModule.swift; sourceTree = "<group>"; };
+		23239F7F21BEF6D2005387AF /* TestRequestParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequestParametersStorage.swift; sourceTree = "<group>"; };
 		233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableViewCell.swift; sourceTree = "<group>"; };
 		233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedObservableTextField.swift; sourceTree = "<group>"; };
 		233A9A152171DCB9000A5F88 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
@@ -205,7 +207,7 @@
 		23BFB28B217E5B2100A948B6 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		23BFB28D217E5DD100A948B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		23E6B1CF21B0878500964B1D /* RevolutTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevolutTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		23E6B1D121B0878500964B1D /* TestApiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiTarget.swift; sourceTree = "<group>"; };
+		23E6B1D121B0878500964B1D /* TestFundsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFundsTarget.swift; sourceTree = "<group>"; };
 		23E6B1D321B0878500964B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsPollingService.swift; sourceTree = "<group>"; };
 		23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartFundsRequestParameters.swift; sourceTree = "<group>"; };
@@ -304,7 +306,7 @@
 		23239F6221BECF0D005387AF /* TestApiTarget */ = {
 			isa = PBXGroup;
 			children = (
-				23E6B1D121B0878500964B1D /* TestApiTarget.swift */,
+				23E6B1D121B0878500964B1D /* TestFundsTarget.swift */,
 			);
 			path = TestApiTarget;
 			sourceTree = "<group>";
@@ -350,6 +352,39 @@
 				23239F7921BEEE5B005387AF /* MockModule.swift */,
 			);
 			path = MockModule;
+			sourceTree = "<group>";
+		};
+		23239F7B21BEF483005387AF /* TestNetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestNetworkLayer;
+			sourceTree = "<group>";
+		};
+		23239F7C21BEF5E3005387AF /* TestApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				23239F7D21BEF5F0005387AF /* TestCoreLayer */,
+				23239F7B21BEF483005387AF /* TestNetworkLayer */,
+			);
+			path = TestApplicationLayer;
+			sourceTree = "<group>";
+		};
+		23239F7D21BEF5F0005387AF /* TestCoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				23239F7E21BEF63E005387AF /* TestRequestParametersStorage */,
+				23239F6521BED3F8005387AF /* TestConfigService */,
+			);
+			path = TestCoreLayer;
+			sourceTree = "<group>";
+		};
+		23239F7E21BEF63E005387AF /* TestRequestParametersStorage */ = {
+			isa = PBXGroup;
+			children = (
+				23239F7F21BEF6D2005387AF /* TestRequestParametersStorage.swift */,
+			);
+			path = TestRequestParametersStorage;
 			sourceTree = "<group>";
 		};
 		233A99F2216FDDA4000A5F88 /* FundsModule */ = {
@@ -697,9 +732,9 @@
 		23E6B1D021B0878500964B1D /* RevolutTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				23239F7C21BEF5E3005387AF /* TestApplicationLayer */,
 				23239F7221BEEC51005387AF /* TestCoodinator */,
 				23239F6A21BEDCD1005387AF /* TestObjectMapper */,
-				23239F6521BED3F8005387AF /* TestConfigService */,
 				23239F6221BECF0D005387AF /* TestApiTarget */,
 				23E6B1D321B0878500964B1D /* Info.plist */,
 			);
@@ -983,6 +1018,7 @@
 				23239F7A21BEEE5B005387AF /* MockModule.swift in Sources */,
 				23239F6C21BEDCEC005387AF /* TestObjectMapper.swift in Sources */,
 				23239F4121BECCB9005387AF /* FundsCoordinator.swift in Sources */,
+				23239F8021BEF6D2005387AF /* TestRequestParametersStorage.swift in Sources */,
 				23239F5C21BECD24005387AF /* Presentable.swift in Sources */,
 				23239F4821BECCD9005387AF /* FundsServiceTarget.swift in Sources */,
 				23239F4F21BECCEF005387AF /* ApiService.swift in Sources */,
@@ -991,7 +1027,7 @@
 				23239F5121BECCF7005387AF /* PollingService.swift in Sources */,
 				23239F5221BECCFB005387AF /* RequestParamatersStorage.swift in Sources */,
 				23239F3621BECC87005387AF /* UnderlinedObservableTextField.swift in Sources */,
-				23E6B1D221B0878500964B1D /* TestApiTarget.swift in Sources */,
+				23E6B1D221B0878500964B1D /* TestFundsTarget.swift in Sources */,
 				23239F5321BECCFE005387AF /* StandartFundsRequestParameters.swift in Sources */,
 				23239F3C21BECCA9005387AF /* FundsViewModel.swift in Sources */,
 				23239F3521BECC85005387AF /* RoundImageView.swift in Sources */,

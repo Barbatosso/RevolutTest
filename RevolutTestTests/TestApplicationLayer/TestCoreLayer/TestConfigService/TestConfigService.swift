@@ -15,10 +15,12 @@ class TestConfigService: XCTestCase {
   private var configService: Configurator?
 
   override func setUp() {
+    super.setUp()
     configService = ConfigService()
   }
 
   override func tearDown() {
+    super.tearDown()
     configService = nil
   }
 

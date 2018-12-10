@@ -1,6 +1,6 @@
 //
-//  TestApiTarget.swift
-//  TestApiTarget
+//  TestFundsTarget.swift
+//  TestFundsTarget
 //
 //  Created by Egor Petrov on 29/11/2018.
 //  Copyright © 2018 Egor Petrov. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class TestApiTarget: XCTestCase {
+class TestFundsTarget: XCTestCase {
 
   private var apiTarget = FundsServiceTarget.funds(base: "EUR")
 
