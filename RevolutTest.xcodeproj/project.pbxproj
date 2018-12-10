@@ -65,6 +65,8 @@
 		23239F6021BECE38005387AF /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
 		23239F6121BECE52005387AF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4F4216A339A000C8046 /* Log.swift */; };
 		23239F6921BED46D005387AF /* TestConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F6821BED46D005387AF /* TestConfigService.swift */; };
+		23239F6C21BEDCEC005387AF /* TestObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F6B21BEDCEC005387AF /* TestObjectMapper.swift */; };
+		23239F6E21BEE54D005387AF /* StubFunds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F6D21BEE54D005387AF /* StubFunds.swift */; };
 		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
 		233A9A0E21712434000A5F88 /* UnderlinedObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */; };
 		233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
@@ -150,6 +152,8 @@
 		231B3C42217FA56D00DA62DB /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
 		231B3C46217FA9E200DA62DB /* ViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHolder.swift; sourceTree = "<group>"; };
 		23239F6821BED46D005387AF /* TestConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfigService.swift; sourceTree = "<group>"; };
+		23239F6B21BEDCEC005387AF /* TestObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObjectMapper.swift; sourceTree = "<group>"; };
+		23239F6D21BEE54D005387AF /* StubFunds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubFunds.swift; sourceTree = "<group>"; };
 		233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableViewCell.swift; sourceTree = "<group>"; };
 		233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedObservableTextField.swift; sourceTree = "<group>"; };
 		233A9A152171DCB9000A5F88 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
@@ -305,6 +309,15 @@
 				23239F6821BED46D005387AF /* TestConfigService.swift */,
 			);
 			path = TestConfigService;
+			sourceTree = "<group>";
+		};
+		23239F6A21BEDCD1005387AF /* TestObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				23239F6B21BEDCEC005387AF /* TestObjectMapper.swift */,
+				23239F6D21BEE54D005387AF /* StubFunds.swift */,
+			);
+			path = TestObjectMapper;
 			sourceTree = "<group>";
 		};
 		233A99F2216FDDA4000A5F88 /* FundsModule */ = {
@@ -652,6 +665,7 @@
 		23E6B1D021B0878500964B1D /* RevolutTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				23239F6A21BEDCD1005387AF /* TestObjectMapper */,
 				23239F6521BED3F8005387AF /* TestConfigService */,
 				23239F6221BECF0D005387AF /* TestApiTarget */,
 				23E6B1D321B0878500964B1D /* Info.plist */,
@@ -922,6 +936,7 @@
 				23239F6921BED46D005387AF /* TestConfigService.swift in Sources */,
 				23239F5521BECD08005387AF /* ConfigService.swift in Sources */,
 				23239F4521BECCCE005387AF /* Funds.swift in Sources */,
+				23239F6E21BEE54D005387AF /* StubFunds.swift in Sources */,
 				23239F4C21BECCE5005387AF /* Mapper.swift in Sources */,
 				23239F3121BECC73005387AF /* ConfigurableCell.swift in Sources */,
 				23239F3921BECC9E005387AF /* FundsTableDelegate.swift in Sources */,
@@ -931,6 +946,7 @@
 				23239F2F21BECC67005387AF /* Row.swift in Sources */,
 				23239F5021BECCF3005387AF /* ApiError.swift in Sources */,
 				23239F3D21BECCAC005387AF /* FundsTableViewCell.swift in Sources */,
+				23239F6C21BEDCEC005387AF /* TestObjectMapper.swift in Sources */,
 				23239F4121BECCB9005387AF /* FundsCoordinator.swift in Sources */,
 				23239F5C21BECD24005387AF /* Presentable.swift in Sources */,
 				23239F4821BECCD9005387AF /* FundsServiceTarget.swift in Sources */,

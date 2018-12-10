@@ -10,5 +10,7 @@ import Foundation
 
 protocol ApiRequester {
 
+  init(configService: ConfigService, mapper: Mapper)
+
   func runRequest<Result: Decodable>(for target: ApiTarget, with completionHandler: @escaping(Result?, Error?) -> Void)
 }
