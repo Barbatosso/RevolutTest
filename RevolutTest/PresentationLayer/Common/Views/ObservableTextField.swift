@@ -24,7 +24,10 @@ class ObservableTextField: UITextField {
   }
 
   @objc private func observeTextChanges(_ textField: UITextField) {
-    guard let text = textField.text else { return }
+    guard let text = textField.text, !text.isEmpty else {
+      observableText.value = placeholder
+      return
+    }
     observableText.value = text
   }
 }

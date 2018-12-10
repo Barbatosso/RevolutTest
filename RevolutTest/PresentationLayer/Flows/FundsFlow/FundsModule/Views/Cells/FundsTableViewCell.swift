@@ -48,6 +48,8 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
   override func becomeFirstResponder() -> Bool {
     super.becomeFirstResponder()
 
+    fundsTextField.placeholder = String(1.0)
+    fundsTextField.observableText.value = fundsTextField.placeholder
     fundsTextField.isEnabled = true
     fundsTextField.becomeFirstResponder()
     return true
@@ -107,9 +109,17 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     flagImageView.image = UIImage(named: data.fundsCode)
     fundTitleLabel.text = data.fundsCode
     fundsTextField.text = string(for: data.value)
+    fundsTextField.delegate = self
   }
 
   private func string(for value: Double) -> String {
     return String(format: "%.3f", value)
+  }
+}
+
+extension FundsTableViewCell: UITextFieldDelegate {
+
+  func textFieldDidBeginEditing(_ textField: UITextField) {
+    textField.text = nil
   }
 }

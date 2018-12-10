@@ -41,12 +41,12 @@ class Observable<T> {
     observers.append(Observer(owner: observer, handler: handler))
   }
 
-  private func cleanDeadObservers() {
-    observers.removeAll { $0.onwer == nil }
-  }
-
   func cleanAllObservers() {
     observers.removeAll()
+  }
+
+  private func cleanDeadObservers() {
+    observers.removeAll { $0.onwer == nil }
   }
 
   private func removeObserver(_ observer: AnyObject) {
