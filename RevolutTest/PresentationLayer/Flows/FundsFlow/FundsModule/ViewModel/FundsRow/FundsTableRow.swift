@@ -41,5 +41,6 @@ class FundsTableRow: TableRow<FundsTableViewCell> {
     }
 
     observableText = cell.fundsTextField.observableText
+    cell.fundsTextField.observableText.cleanAllObservers()
   }
 }

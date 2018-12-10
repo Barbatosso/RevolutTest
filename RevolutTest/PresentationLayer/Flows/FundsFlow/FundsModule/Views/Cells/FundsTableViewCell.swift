@@ -111,11 +111,4 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
   private func string(for value: Double) -> String {
     return String(format: "%.3f", value)
   }
-
-  override func prepareForReuse() {
-    super.prepareForReuse()
-
-    fundsTextField.text = nil
-    fundTitleLabel.text = nil
-  }
 }

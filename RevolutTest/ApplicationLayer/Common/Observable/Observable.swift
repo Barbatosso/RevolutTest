@@ -45,7 +45,7 @@ class Observable<T> {
     observers.removeAll { $0.onwer == nil }
   }
 
-  private func cleanAllObservers() {
+  func cleanAllObservers() {
     observers.removeAll()
   }
 
