@@ -22,6 +22,7 @@ class FundsTableDelegate: NSObject, TableDelegate, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard var rows = tableManager?.rows else { return }
+    tableView.setContentOffset(.zero, animated: true)
 
     let indexPathForFirstItem = IndexPath(row: 0, section: indexPath.section)
     let firstCell = tableView.cellForRow(at: indexPathForFirstItem)
@@ -43,7 +44,7 @@ class FundsTableDelegate: NSObject, TableDelegate, UITableViewDelegate {
     tableManager?.rows = rows
   }
 
-  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
     tableManager?.tableView?.visibleCells.first?.resignFirstResponder()
   }
 }

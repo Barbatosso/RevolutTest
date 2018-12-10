@@ -13,16 +13,16 @@ typealias Currencies = (funds: FundsType?, value: Double?)
 protocol FundsViewModel: class {
 
   var funds: Observable<Currencies> { get }
+  var standardRowData: FundsItem { get }
 
-  var standartRowData: FundsItem { get }
   func getFunds(with handler: @escaping (FundsType?, Error?) -> Void)
   func updateCurrencyCode(_ currencyCode: String)
 
   func addFundsObserver(for observer: AnyObject, with handler: @escaping (FundsType?) -> Void)
+  func observeRatio(_ string: String?)
 
   func viewIsReady(_ isReady: Bool)
 
-  func observeRatio(_ string: String?)
 }
 
 class FundsViewModelImpl: FundsViewModel {
@@ -40,7 +40,7 @@ class FundsViewModelImpl: FundsViewModel {
   var settingsService: RequestParamatersStorage
   var fundsPollingService: FundsPollingService
 
-  var standartRowData: FundsItem {
+  var standardRowData: FundsItem {
     let parameters = settingsService.getDefaultRequestParameters()
     return FundsItem.init(fundsCode: parameters.currencyCode, value: parameters.value)
   }
@@ -77,7 +77,7 @@ class FundsViewModelImpl: FundsViewModel {
 
   private func setupPollServiceHandler() {
     fundsPollingService.onValueUpdate = { [weak funds] fundsItem, _ in
-      funds?.value?.0 = fundsItem
+      funds?.value?.funds = fundsItem
     }
   }
 }

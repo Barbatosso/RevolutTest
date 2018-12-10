@@ -34,10 +34,10 @@ class FundsViewController: UIViewController, FundsModule, ViewHolder {
     super.viewDidLoad()
 
     setupTableManager()
-    viewModel.getFunds(with: { [weak self] funds, _ in
+    viewModel.getFunds { [weak self] funds, _ in
       guard let funds = funds else { return }
       self?.bind(funds)
-    })
+    }
   }
 
   private func setupTableManager() {
@@ -60,13 +60,13 @@ class FundsViewController: UIViewController, FundsModule, ViewHolder {
       configureRowTap(for: row, with: item.key)
       return row
     }
-    let rowItem = viewModel.standartRowData
+    let rowItem = viewModel.standardRowData
     let row = FundsTableRow(
       data: rowItem,
       funds: self.viewModel.funds
     )
     configureRowTap(for: row, with: rowItem.fundsCode)
-    rows.insert(row, at: 0)
+    rows.insert(row, at: rows.startIndex)
     tableManager.append(newRows: rows)
     tableManager.reload()
     viewModel.viewIsReady(true)

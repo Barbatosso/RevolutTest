@@ -60,7 +60,6 @@ struct ApiService: ApiRequester {
           completionHandler(nil, error)
         }
       }
-
       task.resume()
     }
   }

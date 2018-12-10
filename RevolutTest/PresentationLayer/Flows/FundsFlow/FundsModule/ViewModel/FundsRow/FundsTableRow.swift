@@ -32,7 +32,7 @@ class FundsTableRow: TableRow<FundsTableViewCell> {
             let rate =  value.rates[self.key]
       else { return }
       var currencyValue: Double
-      if let ratio = item?.value, item?.value?.isInfinite != true {
+      if let ratio = item?.value {
         currencyValue = rate * ratio
       } else {
         currencyValue = rate
