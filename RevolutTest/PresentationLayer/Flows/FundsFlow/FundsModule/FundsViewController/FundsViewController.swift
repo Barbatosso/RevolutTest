@@ -65,6 +65,7 @@ class FundsViewController: UIViewController, FundsModule, ViewHolder {
       data: rowItem,
       funds: self.viewModel.funds
     )
+    configureRowTap(for: row, with: rowItem.fundsCode)
     rows.insert(row, at: 0)
     tableManager.append(newRows: rows)
     tableManager.reload()

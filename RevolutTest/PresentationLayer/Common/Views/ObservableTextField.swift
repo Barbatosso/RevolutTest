@@ -12,18 +12,19 @@ class ObservableTextField: UITextField {
 
   let observableText: Observable<String>
 
-  override var text: String? {
-    didSet {
-      observableText.value = text
-    }
-  }
-
   init() {
     observableText = Observable<String>(value: nil)
     super.init(frame: .zero)
+
+    self.addTarget(self, action: #selector(observeTextChanges), for: .editingChanged)
   }
 
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+
+  @objc private func observeTextChanges(_ textField: UITextField) {
+    guard let text = textField.text else { return }
+    observableText.value = text
   }
 }

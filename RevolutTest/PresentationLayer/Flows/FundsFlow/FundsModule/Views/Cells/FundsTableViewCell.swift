@@ -108,10 +108,6 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     fundsTextField.text = string(for: data.value)
   }
 
-  func observableText() -> Observable<String> {
-    return fundsTextField.observableText
-  }
-
   private func string(for value: Double) -> String {
     return String(format: "%.3f", value)
   }

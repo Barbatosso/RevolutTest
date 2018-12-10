@@ -40,6 +40,6 @@ class FundsTableRow: TableRow<FundsTableViewCell> {
       cell.setNewFund(currencyValue)
     }
 
-    observableText = cell.observableText()
+    observableText = cell.fundsTextField.observableText
   }
 }
