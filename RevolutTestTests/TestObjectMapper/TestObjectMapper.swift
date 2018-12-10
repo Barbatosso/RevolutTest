@@ -40,7 +40,7 @@ class TestObjectMapper: XCTestCase {
     XCTAssertNotNil(result)
   }
 
-  func testPerformanceExample() {
+  func testMapperPerfomance() {
     measure {
       testObjectDecoder()
     }
