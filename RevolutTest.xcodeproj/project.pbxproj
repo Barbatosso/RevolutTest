@@ -71,6 +71,10 @@
 		23239F7721BEEDCC005387AF /* MockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F7621BEEDCC005387AF /* MockViewController.swift */; };
 		23239F7A21BEEE5B005387AF /* MockModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F7921BEEE5B005387AF /* MockModule.swift */; };
 		23239F8021BEF6D2005387AF /* TestRequestParametersStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F7F21BEF6D2005387AF /* TestRequestParametersStorage.swift */; };
+		23239F8621BF06E3005387AF /* MockConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F8521BF06E3005387AF /* MockConfigService.swift */; };
+		23239F8B21BF0788005387AF /* TestApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F8A21BF0788005387AF /* TestApiService.swift */; };
+		23239F8D21BF089B005387AF /* MockApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F8C21BF089B005387AF /* MockApiTarget.swift */; };
+		23239F9021BF0A16005387AF /* MockTemplateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23239F8F21BF0A16005387AF /* MockTemplateEntity.swift */; };
 		233A99F6216FDDEC000A5F88 /* FundsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */; };
 		233A9A0E21712434000A5F88 /* UnderlinedObservableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */; };
 		233A9A122171DCAA000A5F88 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2362A4C52167B720000C8046 /* SwiftyBeaver.framework */; };
@@ -162,6 +166,10 @@
 		23239F7621BEEDCC005387AF /* MockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewController.swift; sourceTree = "<group>"; };
 		23239F7921BEEE5B005387AF /* MockModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModule.swift; sourceTree = "<group>"; };
 		23239F7F21BEF6D2005387AF /* TestRequestParametersStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequestParametersStorage.swift; sourceTree = "<group>"; };
+		23239F8521BF06E3005387AF /* MockConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfigService.swift; sourceTree = "<group>"; };
+		23239F8A21BF0788005387AF /* TestApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApiService.swift; sourceTree = "<group>"; };
+		23239F8C21BF089B005387AF /* MockApiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiTarget.swift; sourceTree = "<group>"; };
+		23239F8F21BF0A16005387AF /* MockTemplateEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTemplateEntity.swift; sourceTree = "<group>"; };
 		233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsTableViewCell.swift; sourceTree = "<group>"; };
 		233A9A0D21712434000A5F88 /* UnderlinedObservableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedObservableTextField.swift; sourceTree = "<group>"; };
 		233A9A152171DCB9000A5F88 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
@@ -357,6 +365,7 @@
 		23239F7B21BEF483005387AF /* TestNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				23239F8721BF0762005387AF /* TestApiRequester */,
 			);
 			path = TestNetworkLayer;
 			sourceTree = "<group>";
@@ -385,6 +394,17 @@
 				23239F7F21BEF6D2005387AF /* TestRequestParametersStorage.swift */,
 			);
 			path = TestRequestParametersStorage;
+			sourceTree = "<group>";
+		};
+		23239F8721BF0762005387AF /* TestApiRequester */ = {
+			isa = PBXGroup;
+			children = (
+				23239F8F21BF0A16005387AF /* MockTemplateEntity.swift */,
+				23239F8521BF06E3005387AF /* MockConfigService.swift */,
+				23239F8A21BF0788005387AF /* TestApiService.swift */,
+				23239F8C21BF089B005387AF /* MockApiTarget.swift */,
+			);
+			path = TestApiRequester;
 			sourceTree = "<group>";
 		};
 		233A99F2216FDDA4000A5F88 /* FundsModule */ = {
@@ -997,6 +1017,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23239F3321BECC7B005387AF /* TableManager.swift in Sources */,
+				23239F8D21BF089B005387AF /* MockApiTarget.swift in Sources */,
 				23239F4321BECCC7005387AF /* Observer.swift in Sources */,
 				23239F5621BECD0E005387AF /* Coordinator.swift in Sources */,
 				23239F7521BEECB1005387AF /* TestPresentable.swift in Sources */,
@@ -1009,6 +1030,7 @@
 				23239F4C21BECCE5005387AF /* Mapper.swift in Sources */,
 				23239F3121BECC73005387AF /* ConfigurableCell.swift in Sources */,
 				23239F3921BECC9E005387AF /* FundsTableDelegate.swift in Sources */,
+				23239F8B21BF0788005387AF /* TestApiService.swift in Sources */,
 				23239F3421BECC80005387AF /* ViewHolder.swift in Sources */,
 				23239F3821BECC9B005387AF /* FundsViewController.swift in Sources */,
 				23239F4D21BECCE9005387AF /* JsonObjectMapper.swift in Sources */,
@@ -1031,6 +1053,7 @@
 				23239F5321BECCFE005387AF /* StandartFundsRequestParameters.swift in Sources */,
 				23239F3C21BECCA9005387AF /* FundsViewModel.swift in Sources */,
 				23239F3521BECC85005387AF /* RoundImageView.swift in Sources */,
+				23239F9021BF0A16005387AF /* MockTemplateEntity.swift in Sources */,
 				23239F4421BECCCA005387AF /* FundsType.swift in Sources */,
 				23239F3021BECC6A005387AF /* TableRow.swift in Sources */,
 				23239F3A21BECCA1005387AF /* FundsItem.swift in Sources */,
@@ -1045,6 +1068,7 @@
 				23239F5921BECD19005387AF /* Routable.swift in Sources */,
 				23239F4021BECCB6005387AF /* FundsModuleFabric.swift in Sources */,
 				23239F2E21BECC64005387AF /* TableDataSource.swift in Sources */,
+				23239F8621BF06E3005387AF /* MockConfigService.swift in Sources */,
 				23239F3F21BECCB3005387AF /* FundsModule.swift in Sources */,
 				23239F3E21BECCB0005387AF /* FundsView.swift in Sources */,
 				23239F2D21BECC60005387AF /* TableDelegate.swift in Sources */,

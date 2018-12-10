@@ -10,10 +10,10 @@ import Foundation
 
 struct ApiService: ApiRequester {
 
-  private let configService: ConfigService
+  private let configService: Configurator
   private let mapper: Mapper
 
-  init(configService: ConfigService, mapper: Mapper) {
+  init(configService: Configurator, mapper: Mapper) {
     self.configService = configService
     self.mapper = mapper
   }
