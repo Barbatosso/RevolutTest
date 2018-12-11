@@ -339,7 +339,7 @@
 		23239F7221BEEC51005387AF /* TestCoodinator */ = {
 			isa = PBXGroup;
 			children = (
-				2349E4B021C049F3000D70D6 /* TestAppRouter */,
+				2349E4B021C049F3000D70D6 /* TestRouter */,
 				23239F7321BEEC9B005387AF /* TestPresentable */,
 			);
 			path = TestCoodinator;
@@ -483,12 +483,12 @@
 			path = TestObservable;
 			sourceTree = "<group>";
 		};
-		2349E4B021C049F3000D70D6 /* TestAppRouter */ = {
+		2349E4B021C049F3000D70D6 /* TestRouter */ = {
 			isa = PBXGroup;
 			children = (
 				2349E4B121C04A10000D70D6 /* TestAppRouter.swift */,
 			);
-			path = TestAppRouter;
+			path = TestRouter;
 			sourceTree = "<group>";
 		};
 		2362A4C42167B720000C8046 /* Frameworks */ = {
