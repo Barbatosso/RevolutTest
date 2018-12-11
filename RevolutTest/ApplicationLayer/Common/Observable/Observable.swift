@@ -14,13 +14,14 @@ class Observable<T> {
 
   var value: T? {
     didSet {
+      cleanDeadObservers()
       observers.forEach {
         $0.handler(value)
       }
     }
   }
 
-  lazy var observers = [Observer<T>]()
+  private lazy var observers = [Observer<T>]()
 
   init(value: T?) {
     self.value = value
@@ -30,10 +31,6 @@ class Observable<T> {
     cleanDeadObservers()
     removeObserver(observer)
     observers.append(Observer(owner: observer, handler: handler))
-  }
-
-  func setObservers(from observable: Observable<T>) {
-    observers = observable.observers
   }
 
   func observeWithUniqueObserver(_ observer: AnyObject, handler: @escaping Handler) {

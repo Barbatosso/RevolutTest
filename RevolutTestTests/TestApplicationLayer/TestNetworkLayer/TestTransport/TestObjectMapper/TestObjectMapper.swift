@@ -36,7 +36,7 @@ class TestObjectMapper: XCTestCase {
       result = try mapper?.result(from: encodedData!)
     } catch {
       log.error(error)
-      XCTAssertThrowsError(error)
+      XCTAssertNoThrow(error)
     }
 
     XCTAssertNotNil(result)
