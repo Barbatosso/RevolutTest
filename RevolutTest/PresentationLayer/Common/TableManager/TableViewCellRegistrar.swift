@@ -10,12 +10,14 @@ import UIKit
 
 protocol TableViewCellRegistrar {
 
+  var registeredIds: Set<String> { get }
+
   func register(_ cellClass: AnyClass, for reuseId: String)
 }
 
 class TableViewCellRegistrarImpl: TableViewCellRegistrar {
 
-  private var registeredIds = Set<String>()
+  var registeredIds = Set<String>()
 
   private weak var tableView: UITableView?
 
