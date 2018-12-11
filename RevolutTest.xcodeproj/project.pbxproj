@@ -84,6 +84,10 @@
 		2349E4AB21BFE495000D70D6 /* TestFundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4AA21BFE495000D70D6 /* TestFundsPollingService.swift */; };
 		2349E4AF21BFF704000D70D6 /* TestObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4AE21BFF704000D70D6 /* TestObservable.swift */; };
 		2349E4B221C04A10000D70D6 /* TestAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4B121C04A10000D70D6 /* TestAppRouter.swift */; };
+		2349E4B821C05B53000D70D6 /* TestBaseCoordintator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4B721C05B53000D70D6 /* TestBaseCoordintator.swift */; };
+		2349E4C621C0627B000D70D6 /* MockViewHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4C521C0627B000D70D6 /* MockViewHolderView.swift */; };
+		2349E4C821C06290000D70D6 /* MockViewHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4C721C06290000D70D6 /* MockViewHolderViewController.swift */; };
+		2349E4CC21C0631F000D70D6 /* TestViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4CB21C0631F000D70D6 /* TestViewHolder.swift */; };
 		2362A4D02167F538000C8046 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4CF2167F538000C8046 /* Presentable.swift */; };
 		2362A4D52167FACB000C8046 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D42167FACB000C8046 /* Coordinator.swift */; };
 		2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D72167FB22000C8046 /* BaseCoordinator.swift */; };
@@ -181,6 +185,10 @@
 		2349E4AA21BFE495000D70D6 /* TestFundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFundsPollingService.swift; sourceTree = "<group>"; };
 		2349E4AE21BFF704000D70D6 /* TestObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObservable.swift; sourceTree = "<group>"; };
 		2349E4B121C04A10000D70D6 /* TestAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppRouter.swift; sourceTree = "<group>"; };
+		2349E4B721C05B53000D70D6 /* TestBaseCoordintator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseCoordintator.swift; sourceTree = "<group>"; };
+		2349E4C521C0627B000D70D6 /* MockViewHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewHolderView.swift; sourceTree = "<group>"; };
+		2349E4C721C06290000D70D6 /* MockViewHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewHolderViewController.swift; sourceTree = "<group>"; };
+		2349E4CB21C0631F000D70D6 /* TestViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewHolder.swift; sourceTree = "<group>"; };
 		2362A4C52167B720000C8046 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		2362A4CF2167F538000C8046 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		2362A4D22167F8AA000C8046 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
@@ -269,8 +277,8 @@
 		231B3C36217FA13C00DA62DB /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2349E4BF21C061E6000D70D6 /* Helpers */,
 				23FF285821B2EC66002C06AE /* TableManager */,
-				231B3C44217FA9BB00DA62DB /* Protocols */,
 				231B3C37217FA13C00DA62DB /* Views */,
 			);
 			path = Common;
@@ -292,22 +300,6 @@
 				233A99F5216FDDEC000A5F88 /* FundsTableViewCell.swift */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		231B3C44217FA9BB00DA62DB /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				231B3C45217FA9C500DA62DB /* Views */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		231B3C45217FA9C500DA62DB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				231B3C46217FA9E200DA62DB /* ViewHolder.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		231E91E421ADC8010070B4AB /* FundsService */ = {
@@ -339,6 +331,7 @@
 		23239F7221BEEC51005387AF /* TestCoodinator */ = {
 			isa = PBXGroup;
 			children = (
+				2349E4B621C05B34000D70D6 /* TestBaseCoordinator */,
 				2349E4B021C049F3000D70D6 /* TestRouter */,
 				23239F7321BEEC9B005387AF /* TestPresentable */,
 			);
@@ -489,6 +482,64 @@
 				2349E4B121C04A10000D70D6 /* TestAppRouter.swift */,
 			);
 			path = TestRouter;
+			sourceTree = "<group>";
+		};
+		2349E4B621C05B34000D70D6 /* TestBaseCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2349E4B721C05B53000D70D6 /* TestBaseCoordintator.swift */,
+			);
+			path = TestBaseCoordinator;
+			sourceTree = "<group>";
+		};
+		2349E4B921C060E2000D70D6 /* TestPresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2349E4C021C061ED000D70D6 /* TestCommon */,
+			);
+			path = TestPresentationLayer;
+			sourceTree = "<group>";
+		};
+		2349E4BF21C061E6000D70D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				231B3C46217FA9E200DA62DB /* ViewHolder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2349E4C021C061ED000D70D6 /* TestCommon */ = {
+			isa = PBXGroup;
+			children = (
+				2349E4C121C061FA000D70D6 /* TestHelpers */,
+			);
+			path = TestCommon;
+			sourceTree = "<group>";
+		};
+		2349E4C121C061FA000D70D6 /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				2349E4C321C06207000D70D6 /* TestViewHolder */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		2349E4C321C06207000D70D6 /* TestViewHolder */ = {
+			isa = PBXGroup;
+			children = (
+				2349E4C421C06210000D70D6 /* VIewHolderMock */,
+				2349E4CB21C0631F000D70D6 /* TestViewHolder.swift */,
+			);
+			path = TestViewHolder;
+			sourceTree = "<group>";
+		};
+		2349E4C421C06210000D70D6 /* VIewHolderMock */ = {
+			isa = PBXGroup;
+			children = (
+				2349E4C521C0627B000D70D6 /* MockViewHolderView.swift */,
+				2349E4C721C06290000D70D6 /* MockViewHolderViewController.swift */,
+			);
+			path = VIewHolderMock;
 			sourceTree = "<group>";
 		};
 		2362A4C42167B720000C8046 /* Frameworks */ = {
@@ -815,6 +866,7 @@
 		23E6B1D021B0878500964B1D /* RevolutTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				2349E4B921C060E2000D70D6 /* TestPresentationLayer */,
 				23239F7C21BEF5E3005387AF /* TestApplicationLayer */,
 				23E6B1D321B0878500964B1D /* Info.plist */,
 			);
@@ -1080,6 +1132,7 @@
 				23239F8D21BF089B005387AF /* MockApiTarget.swift in Sources */,
 				2349E4B221C04A10000D70D6 /* TestAppRouter.swift in Sources */,
 				23239F4321BECCC7005387AF /* Observer.swift in Sources */,
+				2349E4B821C05B53000D70D6 /* TestBaseCoordintator.swift in Sources */,
 				23239F5621BECD0E005387AF /* Coordinator.swift in Sources */,
 				23239F7521BEECB1005387AF /* TestPresentable.swift in Sources */,
 				23239F5B21BECD1F005387AF /* NavigationRouter.swift in Sources */,
@@ -1093,6 +1146,8 @@
 				23239F3921BECC9E005387AF /* FundsTableDelegate.swift in Sources */,
 				23239F9521BF0FF4005387AF /* TestFundsService.swift in Sources */,
 				23239F8B21BF0788005387AF /* TestApiService.swift in Sources */,
+				2349E4C621C0627B000D70D6 /* MockViewHolderView.swift in Sources */,
+				2349E4C821C06290000D70D6 /* MockViewHolderViewController.swift in Sources */,
 				23239F3421BECC80005387AF /* ViewHolder.swift in Sources */,
 				23239F3821BECC9B005387AF /* FundsViewController.swift in Sources */,
 				23239F4D21BECCE9005387AF /* JsonObjectMapper.swift in Sources */,
@@ -1141,6 +1196,7 @@
 				23239F3221BECC78005387AF /* TableViewCellRegistrar.swift in Sources */,
 				23239F4221BECCC2005387AF /* Observable.swift in Sources */,
 				23239F4921BECCDC005387AF /* ApiTarget.swift in Sources */,
+				2349E4CC21C0631F000D70D6 /* TestViewHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

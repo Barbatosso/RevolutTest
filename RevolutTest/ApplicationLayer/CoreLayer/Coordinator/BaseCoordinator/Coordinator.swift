@@ -10,6 +10,8 @@ import Foundation
 
 protocol Coordinator: class {
 
+  var childCoordinators: [Coordinator] { get }
+
   var router: Routable { get }
 
   func start()

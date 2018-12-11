@@ -54,19 +54,6 @@ class TestAppRouter: XCTestCase {
     XCTAssertTrue(viewControllers.isEmpty == true)
   }
 
-  func testPushAndPopModuleInAppRouter() {
-    var viewControllers = navigationController.viewControllers
-    viewControllers.removeAll()
-
-    router.push(mockModule)
-
-    XCTAssertFalse(viewControllers.isEmpty == false)
-
-    router.popModule()
-
-    XCTAssertTrue(viewControllers.isEmpty == true)
-  }
-
   func testSetRootModule() {
     XCTAssertTrue(navigationController.viewControllers.isEmpty,
                   "ViewControllers must be empty before setRootModule")
@@ -95,7 +82,7 @@ class TestAppRouter: XCTestCase {
     XCTAssertTrue(navigationController.viewControllers.isEmpty,
                   "ViewControllers must be empty before present and dismiss")
 
-    navigationRouter.present(MockViewController())
+    navigationRouter.present(mockModule)
 
     XCTAssertFalse(navigationController.viewControllers.isEmpty)
 

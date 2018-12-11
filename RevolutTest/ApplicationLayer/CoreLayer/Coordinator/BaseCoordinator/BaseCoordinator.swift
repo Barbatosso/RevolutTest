@@ -10,7 +10,7 @@ import Foundation
 
 class BaseCoordinator: Coordinator {
 
-  private var childCoordinators: [Coordinator] = []
+  var childCoordinators: [Coordinator] = []
 
   var router: Routable
 

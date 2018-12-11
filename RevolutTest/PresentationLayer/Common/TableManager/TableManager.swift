@@ -39,11 +39,9 @@ class TableManagerImpl: TableManager {
   private var tableDataSource: TableDataSource?
   private var tableDelegate: TableDelegate?
 
-  func connect(
-    to tableView: UITableView,
-    with tableDataSource: TableDataSource.Type,
-    tableDelegate: TableDelegate.Type
-    ) {
+  func connect(to tableView: UITableView,
+               with tableDataSource: TableDataSource.Type,
+               tableDelegate: TableDelegate.Type) {
     self.tableView = tableView
     self.tableDataSource = tableDataSource.init(tableManager: self)
     self.tableDelegate = tableDelegate.init(tableManager: self)
