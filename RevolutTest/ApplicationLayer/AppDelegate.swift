@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.backgroundColor = .white
     let appRouter = AppRouter(window: window)
-    let coordinator = FundsCoordinatorImpl(router: appRouter)
+    let navigationRouter = NavigationRouter(navigationController: UINavigationController())
+    appRouter.setRoot(navigationRouter)
+    let coordinator = FundsCoordinatorImpl(router: navigationRouter)
     coordinator.start()
     window?.makeKeyAndVisible()
     return true

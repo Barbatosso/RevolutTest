@@ -83,6 +83,7 @@
 		233A9A182171DCC9000A5F88 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 233A9A152171DCB9000A5F88 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2349E4AB21BFE495000D70D6 /* TestFundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4AA21BFE495000D70D6 /* TestFundsPollingService.swift */; };
 		2349E4AF21BFF704000D70D6 /* TestObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4AE21BFF704000D70D6 /* TestObservable.swift */; };
+		2349E4B221C04A10000D70D6 /* TestAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2349E4B121C04A10000D70D6 /* TestAppRouter.swift */; };
 		2362A4D02167F538000C8046 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4CF2167F538000C8046 /* Presentable.swift */; };
 		2362A4D52167FACB000C8046 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D42167FACB000C8046 /* Coordinator.swift */; };
 		2362A4D82167FB22000C8046 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A4D72167FB22000C8046 /* BaseCoordinator.swift */; };
@@ -179,6 +180,7 @@
 		233A9A152171DCB9000A5F88 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		2349E4AA21BFE495000D70D6 /* TestFundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFundsPollingService.swift; sourceTree = "<group>"; };
 		2349E4AE21BFF704000D70D6 /* TestObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObservable.swift; sourceTree = "<group>"; };
+		2349E4B121C04A10000D70D6 /* TestAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppRouter.swift; sourceTree = "<group>"; };
 		2362A4C52167B720000C8046 /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		2362A4CF2167F538000C8046 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		2362A4D22167F8AA000C8046 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 		23239F7221BEEC51005387AF /* TestCoodinator */ = {
 			isa = PBXGroup;
 			children = (
+				2349E4B021C049F3000D70D6 /* TestAppRouter */,
 				23239F7321BEEC9B005387AF /* TestPresentable */,
 			);
 			path = TestCoodinator;
@@ -478,6 +481,14 @@
 				2349E4AE21BFF704000D70D6 /* TestObservable.swift */,
 			);
 			path = TestObservable;
+			sourceTree = "<group>";
+		};
+		2349E4B021C049F3000D70D6 /* TestAppRouter */ = {
+			isa = PBXGroup;
+			children = (
+				2349E4B121C04A10000D70D6 /* TestAppRouter.swift */,
+			);
+			path = TestAppRouter;
 			sourceTree = "<group>";
 		};
 		2362A4C42167B720000C8046 /* Frameworks */ = {
@@ -1067,6 +1078,7 @@
 			files = (
 				23239F3321BECC7B005387AF /* TableManager.swift in Sources */,
 				23239F8D21BF089B005387AF /* MockApiTarget.swift in Sources */,
+				2349E4B221C04A10000D70D6 /* TestAppRouter.swift in Sources */,
 				23239F4321BECCC7005387AF /* Observer.swift in Sources */,
 				23239F5621BECD0E005387AF /* Coordinator.swift in Sources */,
 				23239F7521BEECB1005387AF /* TestPresentable.swift in Sources */,

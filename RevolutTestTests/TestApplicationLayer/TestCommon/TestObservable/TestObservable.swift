@@ -29,6 +29,8 @@ class TestObservable: XCTestCase {
     super.tearDown()
 
     observable = nil
+    viewHandler = nil
+    result.removeAll()
   }
 
   func testObservingNewValue() {
