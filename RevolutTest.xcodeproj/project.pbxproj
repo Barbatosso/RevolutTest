@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231329C721C115E200AD91D3 /* FundsViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231329C621C115E200AD91D3 /* FundsViewModelOutput.swift */; };
+		231329C921C12CDD00AD91D3 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231329C821C12CDD00AD91D3 /* UIView+SafeArea.swift */; };
 		231B3C39217FA13C00DA62DB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C38217FA13C00DA62DB /* RoundImageView.swift */; };
 		231B3C3F217FA44B00DA62DB /* FundsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C3E217FA44B00DA62DB /* FundsModule.swift */; };
 		231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C42217FA56D00DA62DB /* FundsView.swift */; };
@@ -172,6 +174,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		231329C621C115E200AD91D3 /* FundsViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewModelOutput.swift; sourceTree = "<group>"; };
+		231329C821C12CDD00AD91D3 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
 		231B3C38217FA13C00DA62DB /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		231B3C3E217FA44B00DA62DB /* FundsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsModule.swift; sourceTree = "<group>"; };
 		231B3C42217FA56D00DA62DB /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
@@ -521,6 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				231B3C46217FA9E200DA62DB /* ViewHolder.swift */,
+				231329C821C12CDD00AD91D3 /* UIView+SafeArea.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -826,6 +831,7 @@
 				2385C5AA21BE9EE9007C82B3 /* Delegate */,
 				237DB91F21B43ED4007E54F3 /* FundsRow */,
 				237DB91A21B43B52007E54F3 /* FundsViewModel.swift */,
+				231329C621C115E200AD91D3 /* FundsViewModelOutput.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1222,6 +1228,8 @@
 				2362A4D02167F538000C8046 /* Presentable.swift in Sources */,
 				231B3C39217FA13C00DA62DB /* RoundImageView.swift in Sources */,
 				231B3C3F217FA44B00DA62DB /* FundsModule.swift in Sources */,
+				231329C921C12CDD00AD91D3 /* UIView+SafeArea.swift in Sources */,
+				231329C721C115E200AD91D3 /* FundsViewModelOutput.swift in Sources */,
 				2362A4FB216A3499000C8046 /* LocalizedString.swift in Sources */,
 				23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */,
 				2362A4F8216A33D5000C8046 /* ApiError.swift in Sources */,

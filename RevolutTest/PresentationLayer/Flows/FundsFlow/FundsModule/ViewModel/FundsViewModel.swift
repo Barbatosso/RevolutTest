@@ -13,16 +13,12 @@ typealias Currencies = (funds: FundsType?, value: Double?)
 protocol FundsViewModel: class {
 
   var funds: Observable<Currencies> { get }
-  var standardRowData: FundsItem { get }
 
-  func getFunds(with handler: @escaping (FundsType?, Error?) -> Void)
-  func updateCurrencyCode(_ currencyCode: String)
+  func getFunds()
 
   func addFundsObserver(for observer: AnyObject, with handler: @escaping (FundsType?) -> Void)
-  func observeRatio(_ string: String?)
 
   func viewIsReady(_ isReady: Bool)
-
 }
 
 class FundsViewModelImpl: FundsViewModel {
@@ -40,6 +36,8 @@ class FundsViewModelImpl: FundsViewModel {
   var settingsService: RequestParamatersStorage
   var fundsPollingService: FundsPollingService
 
+  weak var output: FundsViewModelOutput?
+
   var standardRowData: FundsItem {
     let parameters = settingsService.getDefaultRequestParameters()
     return FundsItem.init(fundsCode: parameters.currencyCode, value: parameters.value)
@@ -50,8 +48,11 @@ class FundsViewModelImpl: FundsViewModel {
     self.fundsPollingService = fundsPollingService
   }
 
-  func getFunds(with handler: @escaping (FundsType?, Error?) -> Void) {
-    fundsPollingService.onValueUpdate = handler
+  func getFunds() {
+    fundsPollingService.onValueUpdate = { [weak self] items, _ in
+        guard let items = items else { return }
+        self?.setupRows(with: items)
+    }
     fundsPollingService.startPollingWith(parameter: settingsService.getDefaultRequestParameters().currencyCode)
   }
 
@@ -78,6 +79,37 @@ class FundsViewModelImpl: FundsViewModel {
   private func setupPollServiceHandler() {
     fundsPollingService.onValueUpdate = { [weak funds] fundsItem, _ in
       funds?.value?.funds = fundsItem
+    }
+  }
+
+  func setupRows(with funds: FundsType) {
+    var rows = funds.rates.map { [unowned self] item -> FundsTableRow in
+      let rowItem = FundsItem(fundsCode: item.key, value: item.value)
+      let row = FundsTableRow(
+        data: rowItem,
+        funds: self.funds
+      )
+      configureRowTap(for: row, with: item.key)
+      return row
+    }
+    let rowItem = standardRowData
+    let row = FundsTableRow(
+      data: rowItem,
+      funds: self.funds
+    )
+    self.configureRowTap(for: row, with: rowItem.fundsCode)
+    rows.insert(row, at: rows.startIndex)
+    output?.setupTableView(with: rows)
+  }
+
+  func configureRowTap(for row: FundsTableRow, with key: String) {
+    row.onTap = { [weak self] in
+      guard let self = self else { return true}
+      row.observableText?.observeWithUniqueObserver(self) {
+        self.observeRatio($0)
+      }
+      self.updateCurrencyCode(key)
+      return true
     }
   }
 }

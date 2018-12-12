@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FundsViewController: UIViewController, FundsModule, ViewHolder {
+class FundsViewController: UIViewController, FundsModule, FundsViewModelOutput, ViewHolder {
 
   typealias RootViewType = FundsView
 
@@ -34,52 +34,16 @@ class FundsViewController: UIViewController, FundsModule, ViewHolder {
     super.viewDidLoad()
 
     setupTableManager()
-    viewModel.getFunds { [weak self] funds, _ in
-      guard let funds = funds else { return }
-      self?.bind(funds)
-    }
+    viewModel.getFunds()
   }
 
   private func setupTableManager() {
     tableManager.connect(to: rootView.tableView, with: BaseTableDataSource.self, tableDelegate: FundsTableDelegate.self)
   }
 
-  private func bind(_ funds: FundsType) {
-    if tableManager.isEmpty {
-      firstTableSetup(with: funds)
-    }
-  }
-
-  private func firstTableSetup(with funds: FundsType) {
-    var rows = funds.rates.map { [unowned self] item -> FundsTableRow in
-      let rowItem = FundsItem(fundsCode: item.key, value: item.value)
-      let row = FundsTableRow(
-        data: rowItem,
-        funds: self.viewModel.funds
-      )
-      configureRowTap(for: row, with: item.key)
-      return row
-    }
-    let rowItem = viewModel.standardRowData
-    let row = FundsTableRow(
-      data: rowItem,
-      funds: self.viewModel.funds
-    )
-    configureRowTap(for: row, with: rowItem.fundsCode)
-    rows.insert(row, at: rows.startIndex)
+  func setupTableView(with rows: [Row]) {
     tableManager.append(newRows: rows)
     tableManager.reload()
     viewModel.viewIsReady(true)
-  }
-
-  private func configureRowTap(for row: FundsTableRow, with key: String) {
-    row.onTap = { [weak self] in
-      guard let self = self else { return true}
-      row.observableText?.observeWithUniqueObserver(self) {
-        self.viewModel.observeRatio($0)
-      }
-      self.viewModel.updateCurrencyCode(key)
-      return true
-    }
   }
 }

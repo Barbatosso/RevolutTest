@@ -21,6 +21,7 @@ struct FundsModuleFabric {
     let viewModel = FundsViewModelImpl(settingsService: settingsService, fundsPollingService: pollService)
     let tableManager = TableManagerImpl()
     let viewController = FundsViewController(tableManager: tableManager, viewModel: viewModel)
+    viewModel.output = viewController
     return viewController
   }
 }

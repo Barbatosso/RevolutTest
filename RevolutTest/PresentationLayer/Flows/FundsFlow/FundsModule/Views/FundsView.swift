@@ -31,7 +31,8 @@ class FundsView: UIView {
   private func setupInitialLayout() {
     addSubview(tableView)
     tableView.snp.makeConstraints { make in
-      make.edges.equalToSuperview()
+      make.top.equalTo(safeOrMarginLayoutGuide)
+      make.leading.bottom.trailing.equalToSuperview()
     }
   }
 }
