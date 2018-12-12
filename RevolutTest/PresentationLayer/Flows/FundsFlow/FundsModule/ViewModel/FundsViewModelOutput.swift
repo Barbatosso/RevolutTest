@@ -11,5 +11,4 @@ import Foundation
 protocol FundsViewModelOutput: class {
 
   func setupTableView(with rows: [Row])
-  
 }

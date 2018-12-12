@@ -19,14 +19,6 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     return imageView
   }()
 
-  private let fundCodeLabel: UILabel = {
-    let label = UILabel()
-    label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
-    label.textColor = .black
-    label.textAlignment = .left
-    return label
-  }()
-
   private let fundTitleLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 14, weight: .light)
@@ -68,7 +60,6 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
 
     contentView.addSubview(flagImageView)
-//    contentView.addSubview(fundCodeLabel)
     contentView.addSubview(fundTitleLabel)
     contentView.addSubview(fundsTextField)
 
@@ -78,12 +69,6 @@ class FundsTableViewCell: UITableViewCell, ConfigurableCell {
       make.leading.equalTo(snp.leadingMargin)
       make.top.bottom.equalTo(contentView)
     }
-
-//    fundCodeLabel.snp.makeConstraints { make in
-//      make.top.greaterThanOrEqualTo(contentView)
-//      make.leading.equalTo(flagImageView.snp.trailing).offset(15)
-//      make.bottom.lessThanOrEqualTo(contentView)
-//    }
 
     fundTitleLabel.snp.makeConstraints { make in
       make.centerY.equalToSuperview()

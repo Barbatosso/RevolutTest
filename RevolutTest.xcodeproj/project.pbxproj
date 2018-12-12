@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		231329C721C115E200AD91D3 /* FundsViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231329C621C115E200AD91D3 /* FundsViewModelOutput.swift */; };
 		231329C921C12CDD00AD91D3 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231329C821C12CDD00AD91D3 /* UIView+SafeArea.swift */; };
+		231329CA21C12E2700AD91D3 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231329C821C12CDD00AD91D3 /* UIView+SafeArea.swift */; };
+		231329CB21C12E2C00AD91D3 /* FundsViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231329C621C115E200AD91D3 /* FundsViewModelOutput.swift */; };
+		231329CF21C12F1C00AD91D3 /* TestFundsFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231329CE21C12F1C00AD91D3 /* TestFundsFlow.swift */; };
 		231B3C39217FA13C00DA62DB /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C38217FA13C00DA62DB /* RoundImageView.swift */; };
 		231B3C3F217FA44B00DA62DB /* FundsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C3E217FA44B00DA62DB /* FundsModule.swift */; };
 		231B3C43217FA56D00DA62DB /* FundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231B3C42217FA56D00DA62DB /* FundsView.swift */; };
@@ -176,6 +179,8 @@
 /* Begin PBXFileReference section */
 		231329C621C115E200AD91D3 /* FundsViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewModelOutput.swift; sourceTree = "<group>"; };
 		231329C821C12CDD00AD91D3 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
+		231329CE21C12F1C00AD91D3 /* TestFundsFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFundsFlow.swift; sourceTree = "<group>"; };
+		231329D121C1310300AD91D3 /* MockFundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFundsViewController.swift; sourceTree = "<group>"; };
 		231B3C38217FA13C00DA62DB /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		231B3C3E217FA44B00DA62DB /* FundsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsModule.swift; sourceTree = "<group>"; };
 		231B3C42217FA56D00DA62DB /* FundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsView.swift; sourceTree = "<group>"; };
@@ -288,6 +293,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231329CC21C12EFE00AD91D3 /* TestFlows */ = {
+			isa = PBXGroup;
+			children = (
+				231329CD21C12F0700AD91D3 /* TestFundsFlow */,
+			);
+			path = TestFlows;
+			sourceTree = "<group>";
+		};
+		231329CD21C12F0700AD91D3 /* TestFundsFlow */ = {
+			isa = PBXGroup;
+			children = (
+				231329D021C130D200AD91D3 /* TestFundsModule */,
+				231329CE21C12F1C00AD91D3 /* TestFundsFlow.swift */,
+			);
+			path = TestFundsFlow;
+			sourceTree = "<group>";
+		};
+		231329D021C130D200AD91D3 /* TestFundsModule */ = {
+			isa = PBXGroup;
+			children = (
+				231329D121C1310300AD91D3 /* MockFundsViewController.swift */,
+			);
+			path = TestFundsModule;
+			sourceTree = "<group>";
+		};
 		231B3C2E217F9A2F00DA62DB /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -516,6 +546,7 @@
 		2349E4B921C060E2000D70D6 /* TestPresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				231329CC21C12EFE00AD91D3 /* TestFlows */,
 				2349E4C021C061ED000D70D6 /* TestCommon */,
 			);
 			path = TestPresentationLayer;
@@ -1284,7 +1315,9 @@
 				23239F3D21BECCAC005387AF /* FundsTableViewCell.swift in Sources */,
 				23239F7A21BEEE5B005387AF /* MockModule.swift in Sources */,
 				23239F6C21BEDCEC005387AF /* TestObjectMapper.swift in Sources */,
+				231329CF21C12F1C00AD91D3 /* TestFundsFlow.swift in Sources */,
 				23239F4121BECCB9005387AF /* FundsCoordinator.swift in Sources */,
+				231329CB21C12E2C00AD91D3 /* FundsViewModelOutput.swift in Sources */,
 				23239F8021BEF6D2005387AF /* TestRequestParametersStorage.swift in Sources */,
 				23239F5C21BECD24005387AF /* Presentable.swift in Sources */,
 				23239F4821BECCD9005387AF /* FundsServiceTarget.swift in Sources */,
@@ -1323,6 +1356,7 @@
 				23239F3E21BECCB0005387AF /* FundsView.swift in Sources */,
 				23239F2D21BECC60005387AF /* TableDelegate.swift in Sources */,
 				23239F3721BECC8B005387AF /* ObservableTextField.swift in Sources */,
+				231329CA21C12E2700AD91D3 /* UIView+SafeArea.swift in Sources */,
 				23239F3B21BECCA6005387AF /* FundsTableRow.swift in Sources */,
 				23239F3221BECC78005387AF /* TableViewCellRegistrar.swift in Sources */,
 				23239F4221BECCC2005387AF /* Observable.swift in Sources */,
