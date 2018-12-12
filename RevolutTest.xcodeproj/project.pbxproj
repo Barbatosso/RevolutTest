@@ -134,6 +134,7 @@
 		23FD2E5021C0E26C005ED308 /* MockSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E4F21C0E26C005ED308 /* MockSecondTableViewCell.swift */; };
 		23FD2E5521C0E2DA005ED308 /* TestTableViewCellRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E5421C0E2DA005ED308 /* TestTableViewCellRegistrar.swift */; };
 		23FD2E5A21C0E534005ED308 /* TestTableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E5921C0E534005ED308 /* TestTableManager.swift */; };
+		23FD2E5D21C0E90C005ED308 /* TestBaseTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E5C21C0E90C005ED308 /* TestBaseTableDataSource.swift */; };
 		23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */; };
 		23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */; };
 		23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */; };
@@ -249,6 +250,7 @@
 		23FD2E4F21C0E26C005ED308 /* MockSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSecondTableViewCell.swift; sourceTree = "<group>"; };
 		23FD2E5421C0E2DA005ED308 /* TestTableViewCellRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCellRegistrar.swift; sourceTree = "<group>"; };
 		23FD2E5921C0E534005ED308 /* TestTableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableManager.swift; sourceTree = "<group>"; };
+		23FD2E5C21C0E90C005ED308 /* TestBaseTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseTableDataSource.swift; sourceTree = "<group>"; };
 		23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsPollingService.swift; sourceTree = "<group>"; };
 		23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartFundsRequestParameters.swift; sourceTree = "<group>"; };
 		23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
@@ -902,6 +904,7 @@
 			isa = PBXGroup;
 			children = (
 				23FD2E4721C0DD25005ED308 /* MockObjects */,
+				23FD2E5B21C0E8E5005ED308 /* TestBaseTableDataSource */,
 				23FD2E5621C0E4FC005ED308 /* TestTableManager */,
 				23FD2E5121C0E28D005ED308 /* TestTableViewCellRegistrar */,
 				23FD2E3F21C0D9CD005ED308 /* TestConfigurableCell */,
@@ -975,6 +978,14 @@
 				23FD2E5921C0E534005ED308 /* TestTableManager.swift */,
 			);
 			path = TestTableManager;
+			sourceTree = "<group>";
+		};
+		23FD2E5B21C0E8E5005ED308 /* TestBaseTableDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2E5C21C0E90C005ED308 /* TestBaseTableDataSource.swift */,
+			);
+			path = TestBaseTableDataSource;
 			sourceTree = "<group>";
 		};
 		23FF284E21B2E184002C06AE /* FundsPollingService */ = {
@@ -1296,6 +1307,7 @@
 				23239F4A21BECCDF005387AF /* HTTPMethod.swift in Sources */,
 				23FD2E4121C0D9E3005ED308 /* MockConfigurableTableViewCell.swift in Sources */,
 				23239F5921BECD19005387AF /* Routable.swift in Sources */,
+				23FD2E5D21C0E90C005ED308 /* TestBaseTableDataSource.swift in Sources */,
 				23239F4021BECCB6005387AF /* FundsModuleFabric.swift in Sources */,
 				23239F2E21BECC64005387AF /* TableDataSource.swift in Sources */,
 				23239F8621BF06E3005387AF /* MockConfigService.swift in Sources */,
