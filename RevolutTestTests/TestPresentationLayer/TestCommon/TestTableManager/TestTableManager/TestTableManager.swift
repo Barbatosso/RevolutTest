@@ -15,11 +15,11 @@ class TestTableManager: XCTestCase {
   override func setUp() {
     tableManager = TableManagerImpl()
   }
-  
+
   override func tearDown() {
     tableManager = nil
   }
-  
+
   func testAppendRow() {
     tableManager.removeAll()
     XCTAssertTrue(tableManager.isEmpty, "Table manager rows must be empty before test")
@@ -39,7 +39,7 @@ class TestTableManager: XCTestCase {
     let tableData = MockCellData(title: "Hello")
     let mockTableRow = MockTableRow(data: tableData)
     let tableData1 = MockCellData(title: "Hello")
-    let mockTableRow1 = MockTableRow(data: tableData)
+    let mockTableRow1 = MockTableRow(data: tableData1)
 
     tableManager.append(newRows: [mockTableRow, mockTableRow1])
     XCTAssert(!tableManager.isEmpty && tableManager.rows.count == 2)
