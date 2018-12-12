@@ -126,6 +126,11 @@
 		23BFB28C217E5B2100A948B6 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28B217E5B2100A948B6 /* Observable.swift */; };
 		23BFB28E217E5DD100A948B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BFB28D217E5DD100A948B6 /* Observer.swift */; };
 		23E6B1D221B0878500964B1D /* TestFundsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E6B1D121B0878500964B1D /* TestFundsTarget.swift */; };
+		23FD2E4121C0D9E3005ED308 /* MockConfigurableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E4021C0D9E3005ED308 /* MockConfigurableTableViewCell.swift */; };
+		23FD2E4321C0DA1F005ED308 /* MockCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E4221C0DA1F005ED308 /* MockCellData.swift */; };
+		23FD2E4521C0DAB0005ED308 /* TestConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E4421C0DAB0005ED308 /* TestConfigurableCell.swift */; };
+		23FD2E4A21C0DD48005ED308 /* MockTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E4921C0DD48005ED308 /* MockTableRow.swift */; };
+		23FD2E4D21C0DDF0005ED308 /* TestTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FD2E4C21C0DDF0005ED308 /* TestTableRow.swift */; };
 		23FF285021B2E1A7002C06AE /* FundsPollingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */; };
 		23FF285421B2E7ED002C06AE /* StandartFundsRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */; };
 		23FF285B21B2EC93002C06AE /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */; };
@@ -233,6 +238,11 @@
 		23E6B1CF21B0878500964B1D /* RevolutTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevolutTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E6B1D121B0878500964B1D /* TestFundsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFundsTarget.swift; sourceTree = "<group>"; };
 		23E6B1D321B0878500964B1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23FD2E4021C0D9E3005ED308 /* MockConfigurableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConfigurableTableViewCell.swift; sourceTree = "<group>"; };
+		23FD2E4221C0DA1F005ED308 /* MockCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCellData.swift; sourceTree = "<group>"; };
+		23FD2E4421C0DAB0005ED308 /* TestConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfigurableCell.swift; sourceTree = "<group>"; };
+		23FD2E4921C0DD48005ED308 /* MockTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTableRow.swift; sourceTree = "<group>"; };
+		23FD2E4C21C0DDF0005ED308 /* TestTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableRow.swift; sourceTree = "<group>"; };
 		23FF284F21B2E1A7002C06AE /* FundsPollingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsPollingService.swift; sourceTree = "<group>"; };
 		23FF285321B2E7ED002C06AE /* StandartFundsRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartFundsRequestParameters.swift; sourceTree = "<group>"; };
 		23FF285A21B2EC93002C06AE /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
@@ -323,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				23239F6B21BEDCEC005387AF /* TestObjectMapper.swift */,
-				23239F6D21BEE54D005387AF /* StubFunds.swift */,
 			);
 			path = TestObjectMapper;
 			sourceTree = "<group>";
@@ -511,6 +520,7 @@
 		2349E4C021C061ED000D70D6 /* TestCommon */ = {
 			isa = PBXGroup;
 			children = (
+				23FD2E3C21C0D97B005ED308 /* TestTableManager */,
 				2349E4C121C061FA000D70D6 /* TestHelpers */,
 			);
 			path = TestCommon;
@@ -866,11 +876,72 @@
 		23E6B1D021B0878500964B1D /* RevolutTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				23FD2E3B21C0D913005ED308 /* TestResources */,
 				2349E4B921C060E2000D70D6 /* TestPresentationLayer */,
 				23239F7C21BEF5E3005387AF /* TestApplicationLayer */,
 				23E6B1D321B0878500964B1D /* Info.plist */,
 			);
 			path = RevolutTestTests;
+			sourceTree = "<group>";
+		};
+		23FD2E3B21C0D913005ED308 /* TestResources */ = {
+			isa = PBXGroup;
+			children = (
+				23239F6D21BEE54D005387AF /* StubFunds.swift */,
+			);
+			path = TestResources;
+			sourceTree = "<group>";
+		};
+		23FD2E3C21C0D97B005ED308 /* TestTableManager */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2E4721C0DD25005ED308 /* MockObjects */,
+				23FD2E3F21C0D9CD005ED308 /* TestConfigurableCell */,
+				23FD2E3D21C0D985005ED308 /* TestTableRow */,
+			);
+			path = TestTableManager;
+			sourceTree = "<group>";
+		};
+		23FD2E3D21C0D985005ED308 /* TestTableRow */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2E4C21C0DDF0005ED308 /* TestTableRow.swift */,
+			);
+			path = TestTableRow;
+			sourceTree = "<group>";
+		};
+		23FD2E3F21C0D9CD005ED308 /* TestConfigurableCell */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2E4421C0DAB0005ED308 /* TestConfigurableCell.swift */,
+			);
+			path = TestConfigurableCell;
+			sourceTree = "<group>";
+		};
+		23FD2E4621C0DD1B005ED308 /* MockConfigurableCell */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2E4221C0DA1F005ED308 /* MockCellData.swift */,
+				23FD2E4021C0D9E3005ED308 /* MockConfigurableTableViewCell.swift */,
+			);
+			path = MockConfigurableCell;
+			sourceTree = "<group>";
+		};
+		23FD2E4721C0DD25005ED308 /* MockObjects */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2E4821C0DD34005ED308 /* MockTableRow */,
+				23FD2E4621C0DD1B005ED308 /* MockConfigurableCell */,
+			);
+			path = MockObjects;
+			sourceTree = "<group>";
+		};
+		23FD2E4821C0DD34005ED308 /* MockTableRow */ = {
+			isa = PBXGroup;
+			children = (
+				23FD2E4921C0DD48005ED308 /* MockTableRow.swift */,
+			);
+			path = MockTableRow;
 			sourceTree = "<group>";
 		};
 		23FF284E21B2E184002C06AE /* FundsPollingService */ = {
@@ -1145,10 +1216,12 @@
 				23239F3121BECC73005387AF /* ConfigurableCell.swift in Sources */,
 				23239F3921BECC9E005387AF /* FundsTableDelegate.swift in Sources */,
 				23239F9521BF0FF4005387AF /* TestFundsService.swift in Sources */,
+				23FD2E4D21C0DDF0005ED308 /* TestTableRow.swift in Sources */,
 				23239F8B21BF0788005387AF /* TestApiService.swift in Sources */,
 				2349E4C621C0627B000D70D6 /* MockViewHolderView.swift in Sources */,
 				2349E4C821C06290000D70D6 /* MockViewHolderViewController.swift in Sources */,
 				23239F3421BECC80005387AF /* ViewHolder.swift in Sources */,
+				23FD2E4321C0DA1F005ED308 /* MockCellData.swift in Sources */,
 				23239F3821BECC9B005387AF /* FundsViewController.swift in Sources */,
 				23239F4D21BECCE9005387AF /* JsonObjectMapper.swift in Sources */,
 				23239F2F21BECC67005387AF /* Row.swift in Sources */,
@@ -1182,8 +1255,10 @@
 				23239F4621BECCD2005387AF /* FundsPollingService.swift in Sources */,
 				23239F5721BECD14005387AF /* BaseCoordinator.swift in Sources */,
 				23239F5A21BECD1D005387AF /* AppRouter.swift in Sources */,
+				23FD2E4A21C0DD48005ED308 /* MockTableRow.swift in Sources */,
 				23239F5421BECD04005387AF /* Configurator.swift in Sources */,
 				23239F4A21BECCDF005387AF /* HTTPMethod.swift in Sources */,
+				23FD2E4121C0D9E3005ED308 /* MockConfigurableTableViewCell.swift in Sources */,
 				23239F5921BECD19005387AF /* Routable.swift in Sources */,
 				23239F4021BECCB6005387AF /* FundsModuleFabric.swift in Sources */,
 				23239F2E21BECC64005387AF /* TableDataSource.swift in Sources */,
@@ -1196,6 +1271,7 @@
 				23239F3221BECC78005387AF /* TableViewCellRegistrar.swift in Sources */,
 				23239F4221BECCC2005387AF /* Observable.swift in Sources */,
 				23239F4921BECCDC005387AF /* ApiTarget.swift in Sources */,
+				23FD2E4521C0DAB0005ED308 /* TestConfigurableCell.swift in Sources */,
 				2349E4CC21C0631F000D70D6 /* TestViewHolder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
